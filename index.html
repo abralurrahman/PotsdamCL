@@ -178,12 +178,103 @@ tbody tr:last-child td{border-bottom:none}
 footer{text-align:center;padding:36px 20px 28px;border-top:1px solid var(--border);background:var(--white)}
 .fadm{color:var(--fog);text-decoration:none;font-size:14px;transition:color .2s;padding:4px 8px;border-radius:4px;display:inline-block;margin-top:14px}
 .fadm:hover{color:var(--muted);background:var(--mist)}
-@media(max-width:900px){.pod{grid-template-columns:1fr 1fr}}
-@media(max-width:600px){
-  .pod{grid-template-columns:1fr}.mh h1{font-size:34px;letter-spacing:-1px}
-  .hi{padding:0 16px}main{padding:20px 16px 60px}.mhi{padding:0 16px}
-  .mhst{flex-wrap:wrap;margin:0 -16px;padding:0 16px}.mhs{padding:14px 24px 14px 0;min-width:80px}.mhsv{font-size:22px}
+@media(max-width:900px){
+  .pod{grid-template-columns:1fr 1fr}
+  .mh h1{font-size:44px}
+}
+@media(max-width:640px){
+  /* Header */
+  .hi{padding:0 14px;height:56px}
+  .lm{width:34px;height:34px;font-size:12px}
+  .ln span:last-child{display:none}
+  nav{height:56px}
+  nav button{padding:0 11px;font-size:10px;letter-spacing:.3px;border-bottom-width:2px}
   nav button span{display:none}
+  nav button[data-s]::after{content:attr(data-s);font-size:10px;font-weight:700;letter-spacing:.3px}
+  .abtn{padding:0 10px!important;font-size:9px!important}
+
+  /* Hero */
+  .mh{padding:28px 0 0}
+  .mhi{padding:0 14px}
+  .stag{font-size:9px;padding:4px 10px;margin-bottom:12px}
+  .mh h1{font-size:28px;letter-spacing:-1px}
+  .mh p{font-size:12px;margin-bottom:20px}
+  .mhst{flex-wrap:wrap;margin:0 -14px;padding:0 14px}
+  .mhs{width:50%;min-width:0;padding:12px 10px 12px 0;margin-right:0;border-right:none;border-bottom:1px solid rgba(255,255,255,.07)}
+  .mhs:nth-child(odd){border-right:1px solid rgba(255,255,255,.07)}
+  .mhs:nth-child(3),.mhs:nth-child(4){border-bottom:none}
+  .mhsv{font-size:20px}
+  .mhsl{font-size:9px}
+
+  /* Main */
+  main{padding:16px 14px 60px}
+  .st{font-size:18px}
+  .sh{flex-direction:column;align-items:flex-start;gap:10px}
+  .seg{width:100%;margin-left:0;justify-content:space-between}
+  .sg{flex:1;text-align:center;padding:7px 4px;font-size:10px}
+
+  /* Ranking pods */
+  .pod{grid-template-columns:1fr;gap:12px;margin-bottom:20px}
+  .pc{padding:18px 16px}
+  .pcn2{font-size:56px}
+  .pcn{font-size:15px;margin-bottom:10px}
+  .pcs{gap:14px}
+  .pcsv{font-size:14px}
+
+  /* Table container */
+  .tc{border-radius:8px}
+  .tt{padding:10px 12px;gap:8px}
+  .tt input{width:100%;box-sizing:border-box}
+  .ti{display:none}
+  .ts{overflow-x:auto;-webkit-overflow-scrolling:touch;position:relative}
+  .ts::-webkit-scrollbar{height:4px}
+  .ts::-webkit-scrollbar-track{background:var(--mist)}
+  .ts::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px}
+  table{font-size:12px;min-width:480px}
+  th{padding:9px 10px;font-size:9px;letter-spacing:.5px}
+  td{padding:8px 10px}
+  .plc{font-size:12px}
+  .rc{width:28px}
+  .rv{font-size:11px}
+
+  /* Stats tabs */
+  .tabs{overflow-x:auto;flex-wrap:nowrap;-webkit-overflow-scrolling:touch;padding-bottom:0;margin-bottom:16px}
+  .tab{white-space:nowrap;padding:8px 16px;font-size:10px}
+
+  /* Players grid */
+  .pgr{grid-template-columns:repeat(2,1fr);gap:10px}
+  .pgc{padding:14px 12px}
+  .pgcn{font-size:12px;margin-bottom:8px}
+  .pgcv{font-size:13px}
+  .pgcl{font-size:9px}
+  .sh .sw{width:100%;margin-left:0!important;display:block}
+  .sh .sw input{width:100%!important;box-sizing:border-box}
+
+  /* Modal */
+  .mo{padding:20px 16px;border-radius:12px;max-height:88vh}
+  .mn{font-size:20px}
+  .mm{font-size:11px;margin-bottom:14px}
+  .mg{grid-template-columns:repeat(auto-fill,minmax(90px,1fr));gap:8px}
+  .mb{padding:10px 8px}
+  .mbv{font-size:15px}
+  .mbl{font-size:9px}
+
+  /* Admin */
+  .ac{padding:18px 14px}
+  .fgr{grid-template-columns:repeat(2,1fr);gap:10px}
+  .ac h3{font-size:17px}
+
+  /* Footer */
+  footer{padding:24px 14px 20px}
+}
+@media(max-width:380px){
+  .mh h1{font-size:24px}
+  .pgr{grid-template-columns:1fr}
+  .hi{height:52px}
+  nav{height:52px}
+  nav button{padding:0 8px}
+  .seg{gap:2px}
+  .sg{font-size:9px;padding:6px 2px}
 }
 </style>
 </head>
@@ -199,9 +290,9 @@ footer{text-align:center;padding:36px 20px 28px;border-top:1px solid var(--borde
       </div>
     </a>
     <nav>
-      <button class="active" onclick="showPage('rankings')"><span>Rankings</span></button>
-      <button onclick="showPage('stats')"><span>Statistics</span></button>
-      <button onclick="showPage('players')"><span>Players</span></button>
+      <button class="active" data-s="Rank" onclick="showPage('rankings')"><span>Rankings</span></button>
+      <button data-s="Stats" onclick="showPage('stats')"><span>Statistics</span></button>
+      <button data-s="Players" onclick="showPage('players')"><span>Players</span></button>
       <button id="adminNavBtn" class="abtn" style="display:none" onclick="showPage('admin')">⚙ Admin</button>
     </nav>
   </div>
@@ -415,6 +506,15 @@ function rP(){
 
 function setRV(v,b){rv=v;sc=null;document.querySelectorAll('.sg').forEach(x=>x.classList.remove('active'));b.classList.add('active');rP();rR();}
 
+function valOf(k,v){
+  if(v==null)return -1e9;
+  if(k==='Bat_HS'){return parseFloat(String(v).replace('*',''))||0;}
+  if(k==='Bowl_Best'){const m=String(v).match(/^(\d+)\/(\d+)$/);return m?parseInt(m[1])*10000-parseInt(m[2]):-1e9;}
+  if(typeof v==='number')return v;
+  return String(v);
+}
+function cmp(k,a,b,dir){const av=valOf(k,a),bv=valOf(k,b);if(typeof av==='string')return String(av).localeCompare(String(bv))*dir;return(av-bv)*dir;}
+
 const RCOL={
   bat:[{k:'rank',l:'#'},{k:'Player',l:'Player'},{k:'Bat_Matches',l:'Mat'},{k:'Bat_Innings',l:'Inn'},{k:'Bat_Runs',l:'Runs'},{k:'Bat_HS',l:'HS'},{k:'Bat_Avg',l:'Avg'},{k:'Bat_SR',l:'SR'},{k:'Bat_50s',l:'50'},{k:'Bat_100s',l:'100'},{k:'Bat_4s',l:'4s'},{k:'Bat_6s',l:'6s'},{k:'Bat_Rating',l:'Rating'}],
   bowl:[{k:'rank',l:'#'},{k:'Player',l:'Player'},{k:'Bowl_Overs',l:'Overs'},{k:'Bowl_Wkts',l:'Wkts'},{k:'Bowl_Best',l:'Best'},{k:'Bowl_Avg',l:'Avg'},{k:'Bowl_Econ',l:'Econ'},{k:'Bowl_SR',l:'SR'},{k:'Bowl_5w',l:'5W'},{k:'Bowl_Rating',l:'Rating'}],
@@ -425,7 +525,7 @@ function rR(){
   const c=RC[rv],cols=RCOL[rv];
   const q=document.getElementById('rs').value.toLowerCase();
   let rows=[...c.src()].filter(p=>p[c.rk]!=null&&p.Player.toLowerCase().includes(q));
-  if(sc&&sc!=='rank')rows.sort((a,b)=>{let av=a[sc]??-Infinity,bv=b[sc]??-Infinity;return typeof av==='string'?av.localeCompare(bv)*sd:(av-bv)*sd;});
+  if(sc&&sc!=='rank')rows.sort((a,b)=>cmp(sc,a[sc],b[sc],sd));
   else rows.sort((a,b)=>(b[c.rk]||0)-(a[c.rk]||0));
   const mx=rows.length?Math.max(...rows.map(p=>p[c.rk]||0)):1;
   document.getElementById('ri').textContent=rows.length+' players';
@@ -460,7 +560,7 @@ function sR(){
   const q=document.getElementById('ss').value.toLowerCase();
   let rows=[...c.src()].filter(p=>p.Player.toLowerCase().includes(q));
   const k=stc||c.sk;
-  rows.sort((a,b)=>{let av=a[k]??-Infinity,bv=b[k]??-Infinity;return typeof av==='string'?av.localeCompare(bv)*std:(av-bv)*std;});
+  rows.sort((a,b)=>cmp(k,a[k],b[k],std));
   document.getElementById('si').textContent=rows.length+' players';
   document.getElementById('sh2').innerHTML='<tr>'+c.cols.map(col=>`<th class="${stc===col.k?(std>0?'sa':'sd'):''}" onclick="ssort('${col.k}')">${col.l}</th>`).join('')+'</tr>';
   document.getElementById('sb2').innerHTML=rows.map((p,i)=>`<tr class="${i<3?'rw'+(i+1):''}" onclick="oM('${esc(p.Player)}')">
