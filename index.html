@@ -426,20 +426,21 @@ footer{text-align:center;padding:36px 20px 28px;border-top:1px solid var(--borde
 
   <div class="ac">
     <h3>ICC Ranking Tools</h3>
-    <p>Manage ranking trends and apply ICC-style inactivity decay. Ratings are form-based (average × strike rate efficiency), not just total runs or wickets.</p>
+    <p>Manage ranking trends and apply league-form ranking updates. Players who played get priority; inactive players lose points.</p>
     <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px">
       <button class="btn bp" onclick="snapshotRanks()">📸 Snapshot Rankings (Before Update)</button>
       <button class="btn bp" onclick="recalcAllRatings();localStorage.setItem(SK,JSON.stringify(D));hs();rP();rR();pR();shA('All ratings recalculated using ICC form formula.','ok')">♻ Recalculate All Ratings (ICC)</button>
     </div>
-    <div class="fsl">Inactivity Decay</div>
-    <p style="font-size:12px;color:var(--muted);margin:8px 0 12px">Tick players who played in the latest match. Unticked players receive ICC-style rating decay.</p>
+    <div class="fsl">Tournament Participation</div>
+    <p style="font-size:12px;color:var(--muted);margin:8px 0 12px">Tick players who played in the latest tournament. Checked players receive a fresh-form participation boost; unticked players lose points for inactivity.</p>
     <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
-      <div class="fg"><label>Decay %</label><input type="number" id="icc-decay-pct" value="3" min="1" max="15" step="0.5" style="background:#f8fafc;border:1px solid var(--border);color:var(--navy);padding:8px 10px;border-radius:6px;font-size:12px;font-family:'Inter',sans-serif;outline:none;width:80px"></div>
+      <div class="fg"><label>Inactive Penalty %</label><input type="number" id="icc-decay-pct" value="8" min="1" max="25" step="0.5" style="background:#f8fafc;border:1px solid var(--border);color:var(--navy);padding:8px 10px;border-radius:6px;font-size:12px;font-family:'Inter',sans-serif;outline:none;width:80px"></div>
+      <div class="fg"><label>Played Boost %</label><input type="number" id="icc-played-boost-pct" value="4" min="0" max="12" step="0.5" style="background:#f8fafc;border:1px solid var(--border);color:var(--navy);padding:8px 10px;border-radius:6px;font-size:12px;font-family:'Inter',sans-serif;outline:none;width:80px"></div>
       <button class="btn bg" onclick="document.querySelectorAll('.icc-cb').forEach(cb=>cb.checked=true)" style="margin-top:20px">All</button>
       <button class="btn bg" onclick="document.querySelectorAll('.icc-cb').forEach(cb=>cb.checked=false)" style="margin-top:20px">None</button>
     </div>
     <div id="icc-players" style="border:1px solid var(--border);border-radius:8px;overflow:hidden;max-height:260px;overflow-y:auto;margin-bottom:14px;background:#fff"></div>
-    <button class="btn bp" onclick="applyIccDecay()">Apply ICC Inactivity Decay</button>
+    <button class="btn bp" onclick="applyParticipationUpdate()">Apply Participation Update</button>
   </div>
 
   <div class="ac">
@@ -683,6 +684,36 @@ function applyIccDecay(){
   localStorage.setItem(SK,JSON.stringify(D));
   hs();rP();rR();pR();
   shA(`Applied ${pct}% ICC inactivity decay to ${n} absent players.`,'ok');
+}
+
+function applyParticipationUpdate(){
+  const played=Array.from(document.querySelectorAll('.icc-cb:checked')).map(cb=>cb.value);
+  if(!played.length){shA('Select at least one player who participated.','er');return;}
+  if(!localStorage.getItem(PRK))snapshotRanksQuiet();
+  const penalty=Math.min(25,Math.max(1,parseFloat(document.getElementById('icc-decay-pct').value)||8));
+  const boost=Math.min(12,Math.max(0,parseFloat(document.getElementById('icc-played-boost-pct').value)||4));
+  const inactiveFactor=1-penalty/100;
+  const playedFactor=1+boost/100;
+  let active=0,inactive=0;
+  D.Batting_Ranked.forEach(p=>{
+    const didPlay=played.includes(p.Player);
+    if(didPlay){
+      p.Bat_Rating=Math.min(1000,Math.round((p.Bat_Rating||calcBatRating(p))*playedFactor));
+      if((p.Bowl_Rating||0)>0)p.Bowl_Rating=Math.min(1000,Math.round((p.Bowl_Rating||calcBowlRating(p))*playedFactor));
+      active++;
+    }else{
+      p.Bat_Rating=Math.max(0,Math.round((p.Bat_Rating||0)*inactiveFactor));
+      if((p.Bowl_Rating||0)>0)p.Bowl_Rating=Math.max(0,Math.round(p.Bowl_Rating*inactiveFactor));
+      inactive++;
+    }
+    const ar=calcARRating(p.Bat_Rating||0,p.Bowl_Rating||0);
+    if(ar>0)p.AllRound_Rating=ar;
+  });
+  D.Bowling_Ranked.forEach(b=>{const p=D.Batting_Ranked.find(x=>x.Player===b.Player);if(p)b.Bowl_Rating=p.Bowl_Rating||0;});
+  D.AllRounders_Ranked.forEach(ar=>{const p=D.Batting_Ranked.find(x=>x.Player===ar.Player);if(p){ar.Bat_Rating=p.Bat_Rating||0;ar.Bowl_Rating=p.Bowl_Rating||0;ar.AllRound_Rating=p.AllRound_Rating||0;}});
+  localStorage.setItem(SK,JSON.stringify(D));
+  hs();rP();rR();pR();sR();
+  shA(`Updated rankings: ${active} played (+${boost}%), ${inactive} inactive (-${penalty}%).`,'ok');
 }
 
 function valOf(k,v){
