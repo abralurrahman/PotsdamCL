@@ -941,21 +941,6 @@ async function chkAdm(){
 
 init();
 
-// Auto-refresh: check for page updates every 5 minutes using ETag
-(function(){
-  let _etag=null;
-  function chk(){
-    if(document.hidden)return;
-    fetch(location.pathname+'?_cb='+Date.now(),{method:'HEAD',cache:'no-store'})
-      .then(r=>{
-        const v=r.headers.get('etag')||r.headers.get('last-modified');
-        if(v&&_etag&&v!==_etag){location.reload(true);}
-        if(v)_etag=v;
-      }).catch(()=>{});
-  }
-  setTimeout(chk,3000); // initial check after 3s to set etag baseline
-  setInterval(chk,5*60*1000); // then every 5 min
-})();
 </script>
 </body>
 </html>
