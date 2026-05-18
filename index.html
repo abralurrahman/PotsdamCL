@@ -293,6 +293,58 @@ footer{text-align:center;padding:36px 20px 28px;border-top:1px solid var(--borde
   .seg{gap:2px}
   .sg{font-size:9px;padding:6px 2px}
 }
+
+/* ── Tournament Page ─────────────────────────────── */
+.tnav{display:flex;gap:14px;margin-bottom:28px;flex-wrap:wrap}
+.tcard{flex:1;min-width:220px;background:var(--white);border:2px solid var(--border);border-radius:var(--r);padding:20px 24px;cursor:pointer;transition:all .2s;position:relative;overflow:hidden}
+.tcard::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#1e40af,#7c3aed,#ea580c)}
+.tcard.active{border-color:#1e40af;box-shadow:0 4px 20px rgba(30,64,175,.18)}
+.tcard:hover{border-color:#a5b4fc;box-shadow:0 4px 14px rgba(30,64,175,.1)}
+.tcard h3{font-family:'Poppins',sans-serif;font-size:15px;font-weight:800;color:var(--navy);margin-bottom:4px}
+.tcard .tdate{font-size:11px;color:var(--muted);font-weight:600;margin-bottom:10px}
+.twinner{font-size:11px;color:#15803d;font-weight:700;background:#f0fdf4;border:1px solid #bbf7d0;padding:3px 10px;border-radius:20px;display:inline-flex;align-items:center;gap:5px}
+.tpend{font-size:11px;color:var(--steel);font-style:italic}
+
+.tstandings{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:30px}
+.tteam{border-radius:var(--r);padding:22px 20px;position:relative;overflow:hidden}
+.tteam.p1{background:linear-gradient(135deg,#78350f 0%,#b45309 40%,#d97706 75%,#fbbf24 100%)}
+.tteam.p2{background:linear-gradient(135deg,#0f2d6e 0%,#1e40af 40%,#2563eb 75%,#60a5fa 100%)}
+.tteam.p3{background:linear-gradient(135deg,#7c2d12 0%,#c2410c 40%,#ea580c 75%,#fb923c 100%)}
+.tteam.px{background:linear-gradient(135deg,#1e293b 0%,#334155 50%,#64748b 100%)}
+.tbadge{font-size:80px;font-family:'Poppins',sans-serif;font-weight:900;color:rgba(255,255,255,.1);position:absolute;right:4px;top:-6px;line-height:1;pointer-events:none;user-select:none}
+.tplace{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,.8);margin-bottom:5px}
+.tplacement{font-size:13px;font-weight:700;color:#fff;margin-bottom:10px;opacity:.95}
+.tname{font-family:'Poppins',sans-serif;font-size:16px;font-weight:700;color:#fff;margin-bottom:10px;text-shadow:0 1px 4px rgba(0,0,0,.3);line-height:1.3;max-width:calc(100% - 56px)}
+.tplayers{display:flex;flex-wrap:wrap;gap:5px;margin-top:10px;padding-top:10px;border-top:1px solid rgba(255,255,255,.2)}
+.tplayer{background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.3);color:#fff;font-size:10px;font-weight:600;padding:3px 9px;border-radius:12px;cursor:pointer;transition:background .15s;backdrop-filter:blur(4px);white-space:nowrap}
+.tplayer:hover{background:rgba(255,255,255,.38)}
+
+.tmatches{margin-bottom:28px}
+.tmatch{background:var(--white);border:1px solid var(--border);border-radius:var(--r);margin-bottom:10px;overflow:hidden;transition:box-shadow .18s}
+.tmatch:hover{box-shadow:var(--sh)}
+.tmh{background:linear-gradient(135deg,#f8fafc,#eef2ff);padding:9px 18px;display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--border)}
+.tmhn{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted)}
+.tmdate{font-size:10px;color:var(--steel);margin-left:auto;font-weight:600}
+.tmb{padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.tmteam{flex:1;text-align:center}
+.tmtname{font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;color:var(--navy);line-height:1.3}
+.tmscore{font-family:'IBM Plex Mono',monospace;font-size:22px;font-weight:700;color:var(--primary);margin-top:6px;line-height:1}
+.tmresult{font-size:10px;color:#16a34a;font-weight:700;margin-top:4px;text-transform:uppercase;letter-spacing:.5px}
+.tmvsep{font-family:'Poppins',sans-serif;font-size:13px;font-weight:800;color:var(--steel);flex-shrink:0;background:var(--mist);width:34px;height:34px;display:flex;align-items:center;justify-content:center;border-radius:50%;border:1px solid var(--border)}
+.tpending{font-size:11px;color:var(--steel);text-align:center;padding:8px 18px 14px;font-style:italic}
+
+.tsection-hd{font-family:'Poppins',sans-serif;font-size:18px;font-weight:800;color:var(--navy);margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.tempty{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:28px;text-align:center;color:var(--muted);font-size:13px;margin-bottom:28px}
+
+@media(max-width:900px){.tstandings{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){
+  .tstandings{grid-template-columns:1fr;gap:12px}
+  .tnav{gap:8px}
+  .tcard{min-width:auto;padding:14px 16px}
+  .tcard h3{font-size:13px}
+  .tmtname{font-size:12px}
+  .tmscore{font-size:18px}
+}
 </style>
 </head>
 <body>
@@ -309,6 +361,7 @@ footer{text-align:center;padding:36px 20px 28px;border-top:1px solid var(--borde
       <button class="active" data-s="Rank" onclick="showPage('rankings')"><span>Rankings</span></button>
       <button data-s="Stats" onclick="showPage('stats')"><span>Statistics</span></button>
       <button data-s="Players" onclick="showPage('players')"><span>Players</span></button>
+      <button data-s="Tour" onclick="showPage('tournaments')"><span>Tournaments</span></button>
       <button id="adminNavBtn" class="abtn" style="display:none" onclick="showPage('admin')">⚙ Admin</button>
     </nav>
   </div>
@@ -316,7 +369,6 @@ footer{text-align:center;padding:36px 20px 28px;border-top:1px solid var(--borde
 
 <div class="mh">
   <div class="mhi">
-    <div class="stag"><span class="sdot"></span>Season 2026 · Starts 3 May 2026</div>
     <h1>Potsdam Cricket League</h1>
     <p>Official player rankings &amp; career statistics</p>
     <div class="mhst">
@@ -376,6 +428,17 @@ footer{text-align:center;padding:36px 20px 28px;border-top:1px solid var(--borde
     <div class="sw" style="margin-left:auto"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);color:var(--steel)"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><input type="text" id="ps" placeholder="Search…" oninput="pR()" style="background:var(--white);border:1px solid var(--border);color:var(--navy);padding:7px 10px 7px 30px;border-radius:6px;font-size:12px;font-family:'Inter',sans-serif;outline:none;width:190px"></div>
   </div>
   <div class="pgr" id="pg"></div>
+</main>
+</div>
+
+<!-- TOURNAMENTS -->
+<div class="page" id="page-tournaments">
+<main>
+  <div class="sh">
+    <div class="st">Tournaments</div><span class="sb n">Season 2026</span>
+  </div>
+  <div class="tnav" id="tnav"></div>
+  <div id="tdetail"></div>
 </main>
 </div>
 
@@ -492,6 +555,113 @@ let rv='bat',st='batting',sc=null,sd=-1,stc=null,std=-1;
 
 function init(){hs();rP();rR();iA();pR();rL();}
 
+const TRNS=[
+  {
+    id:'t1',name:'PBDCL Tournament 1 · 2026',date:'3 May 2026',format:'3 Teams · Round Robin',winner:'Runner-Up Beaters',
+    teams:[
+      {name:'Runner-Up Beaters',place:1,players:['GR Pranto','Mohammad Akash','Jayed Akbar Sumon','Nahid Hasan (Junior)','Aftab Uddin','Ejajur Rahman Redoy','Md Shafiul Haque Ankon']},
+      {name:'The Lethal Force',place:2,players:['Hasibur Rahman','Nahid Hasan','Dipta Roy','Bayazid Bostame Sony','Sazzad Tanveer','Md Abdul Aziz','Md Borhan']},
+      {name:'The Sovereign Seven',place:3,players:['Tanzim Ahmed','Samit Chowdhury','Sufian Ahmed','Mohammed Ridowan','Shahriar Ahmed','Md Noman','Md Shafayet Hossen Chowdhury']}
+    ],
+    matches:[
+      {id:1,label:'Match 1',team1:'Runner-Up Beaters',team2:'The Lethal Force',score1:null,score2:null,winner:null},
+      {id:2,label:'Match 2',team1:'Runner-Up Beaters',team2:'The Sovereign Seven',score1:null,score2:null,winner:null},
+      {id:3,label:'Match 3',team1:'The Lethal Force',team2:'The Sovereign Seven',score1:null,score2:null,winner:null}
+    ]
+  },
+  {
+    id:'t2',name:'PBDCL Tournament 2 · 2026',date:'17 May 2026',format:'Multi-Team Tournament',winner:null,
+    teams:[
+      {name:'Murobbis Dream',place:null,players:['Nahid Hasan']}
+    ],
+    matches:[]
+  }
+];
+let _activeTrn='t1';
+
+function initTournaments(){
+  _renderTrnNav();
+  _renderTrnDetail(_activeTrn);
+}
+
+function selectTrn(id){
+  _activeTrn=id;
+  _renderTrnNav();
+  _renderTrnDetail(id);
+}
+
+function _renderTrnNav(){
+  document.getElementById('tnav').innerHTML=TRNS.map(t=>`
+    <div class="tcard${_activeTrn===t.id?' active':''}" onclick="selectTrn('${t.id}')">
+      <h3>${t.name}</h3>
+      <div class="tdate">${t.date} &nbsp;·&nbsp; ${t.format}</div>
+      ${t.winner?`<div class="twinner">🏆 ${t.winner}</div>`:'<div class="tpend">Detailed data coming soon</div>'}
+    </div>`).join('');
+}
+
+function _renderTrnDetail(id){
+  const t=TRNS.find(x=>x.id===id);
+  if(!t)return;
+  const placeLabel=['','🏆 Champion','🥈 Runner-Up','🥉 Third Place'];
+  const placeClass=['','p1','p2','p3'];
+  const placeText=['','1st Place','2nd Place','3rd Place'];
+  let h='<div class="tdetail">';
+
+  // Standings
+  h+='<div class="tsection-hd">Final Standings</div>';
+  if(t.teams.length>0){
+    h+='<div class="tstandings">';
+    t.teams.forEach(team=>{
+      const pc=team.place?placeClass[team.place]:'px';
+      const pt=team.place?placeText[team.place]:'Participant';
+      const pl=team.place?placeLabel[team.place]:'';
+      h+=`<div class="tteam ${pc}">
+        <div class="tbadge">${team.place||'?'}</div>
+        <div class="tplace">${pt}</div>
+        ${pl?`<div class="tplacement">${pl}</div>`:''}
+        <div class="tname">${team.name}</div>
+        <div class="tplayers">${team.players.map(p=>`<span class="tplayer" onclick="oM('${esc(p)}')">${p}</span>`).join('')}</div>
+      </div>`;
+    });
+    h+='</div>';
+  } else {
+    h+='<div class="tempty">Team data not yet available for this tournament.</div>';
+  }
+
+  // Matches
+  h+='<div class="tsection-hd">Match Results</div>';
+  if(t.matches.length>0){
+    h+='<div class="tmatches">';
+    t.matches.forEach(m=>{
+      const hasScore=m.score1!==null&&m.score2!==null;
+      h+=`<div class="tmatch">
+        <div class="tmh"><span class="tmhn">${m.label}</span>${m.date?`<span class="tmdate">${m.date}</span>`:''}</div>
+        <div class="tmb">
+          <div class="tmteam">
+            <div class="tmtname">${m.team1}</div>
+            ${hasScore?`<div class="tmscore">${m.score1}</div>`:''}
+            ${m.winner===m.team1?'<div class="tmresult">Won</div>':''}
+          </div>
+          <div class="tmvsep">vs</div>
+          <div class="tmteam">
+            <div class="tmtname">${m.team2}</div>
+            ${hasScore?`<div class="tmscore">${m.score2}</div>`:''}
+            ${m.winner===m.team2?'<div class="tmresult">Won</div>':''}
+          </div>
+        </div>
+        ${!hasScore?'<div class="tpending">Detailed scorecard to be added</div>':''}
+      </div>`;
+    });
+    h+='</div>';
+  } else {
+    h+='<div class="tempty">Match data not yet available for this tournament.</div>';
+  }
+
+  h+='</div>';
+  document.getElementById('tdetail').innerHTML=h;
+}
+
+
 function cnt(el,to,dur){
   const t0=performance.now();
   (function step(now){
@@ -516,9 +686,11 @@ function showPage(n){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   document.getElementById('page-'+n).classList.add('active');
   document.querySelectorAll('nav button').forEach(b=>b.classList.remove('active'));
-  ['rankings','stats','players','admin'].indexOf(n)>=0&&document.querySelectorAll('nav button')[['rankings','stats','players','admin'].indexOf(n)].classList.add('active');
+  const _po=['rankings','stats','players','tournaments','admin'];
+  const _pi=_po.indexOf(n);if(_pi>=0)document.querySelectorAll('nav button')[_pi].classList.add('active');
   if(n==='stats')sR();
   if(n==='admin')renderIccPlayers();
+  if(n==='tournaments')initTournaments();
 }
 
 const RC={
