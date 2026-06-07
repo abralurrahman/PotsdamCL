@@ -114,6 +114,219 @@ const TOURNAMENT_SCORECARDS = [
         ]
       }
     ]
+  },
+  {
+    id: 't3',
+    name: 'PCL Season 3 - 2026',
+    date: '7 Jun 2026',
+    format: '3 Teams - Super Three + Final',
+    winner: 'Panoti Boys',
+    teams: [
+      { name: 'Panoti Boys', place: 1, players: ['Sufian Ahmed', 'Jayed Akbar Sumon', 'Nahid Hasan', 'Sazzad Tanveer', 'Ejajur Rahman Redoy', 'Shahriar Ahmed', 'Borshon Gomes'] },
+      { name: 'Bullet Club', place: 2, players: ['Mohammed Ridowan', 'Hasibul Hasan Shanto', 'Tanzim Ahmed', 'Dipta Roy', 'Md Noman', 'Md Shafayet Hossen Chowdhury', 'Biplob Hossain'] },
+      { name: 'Living Legends', place: 3, players: ['Ataullah Khan Rifat', 'Bayazid Bostame Sony', 'Hasibur Rahman', 'Jubair Chowdhury', 'Md Shafiul Haque Ankon', 'Mohammad Akash', 'S M Kamrul Hasan Manik'] }
+    ],
+    matches: [
+      {
+        label: 'Super Three · Match 1', date: '7 Jun 2026',
+        team1: 'Panoti Boys', team2: 'Living Legends',
+        score1: '96/5 (10 Ov)', score2: '97/4 (9.3 Ov)',
+        winner: 'Living Legends', result: 'Living Legends won by 6 wickets', toss: 'Not recorded',
+        bestBat: [['Sufian Ahmed', '50* (22), 5 sixes'], ['Ataullah Khan Rifat', '47 (29), 3 sixes'], ['Hasibur Rahman', '21 (10), 2 sixes']],
+        bestBowl: [['Nahid Hasan', '2/14 (3.0)'], ['Mohammad Akash', '2/14 (2.0)'], ['Ataullah Khan Rifat', '2/11 (3.0)']],
+        squads: {
+          'Panoti Boys': ['Sufian Ahmed (c)', 'Jayed Akbar Sumon (wk)', 'Nahid Hasan', 'Sazzad Tanveer', 'Ejajur Rahman Redoy', 'Shahriar Ahmed', 'Borshon Gomes'],
+          'Living Legends': ['Ataullah Khan Rifat (c)', 'Mohammad Akash', 'Bayazid Bostame Sony', 'Hasibur Rahman', 'Jubair Chowdhury', 'Md Shafiul Haque Ankon', 'S M Kamrul Hasan Manik']
+        },
+        innings: [
+          {
+            team: 'Panoti Boys', score: '96/5 (10 Ov)', extras: '6 (wd 5, nb 1)', fow: '—',
+            bat: [
+              ['Jayed Akbar Sumon (wk)', '—', 21, 12, 0, 3, '175.00'],
+              ['Nahid Hasan', '—', 4, 10, 0, 0, '40.00'],
+              ['Shahriar Ahmed', '—', 10, 11, 1, 0, '90.91'],
+              ['Sufian Ahmed (c)', 'not out', 50, 22, 1, 5, '227.27'],
+              ['Ejajur Rahman Redoy', '—', 5, 3, 1, 0, '166.67'],
+              ['Sazzad Tanveer', '—', 0, 2, 0, 0, '0.00'],
+              ['Borshon Gomes', 'not out', 0, 1, 0, 0, '0.00']
+            ],
+            bowl: [
+              ['Mohammad Akash', '2.0', 14, 2, '7.00'],
+              ['Bayazid Bostame Sony', '2.0', 15, 0, '7.50'],
+              ['Ataullah Khan Rifat (c)', '3.0', 11, 2, '3.67'],
+              ['Jubair Chowdhury', '2.0', 45, 1, '22.50'],
+              ['Hasibur Rahman', '1.0', 11, 0, '11.00']
+            ]
+          },
+          {
+            team: 'Living Legends', score: '97/4 (9.3 Ov)', extras: '17 (wd 16, nb 1)', fow: '—',
+            bat: [
+              ['Mohammad Akash', '—', 1, 6, 0, 0, '16.67'],
+              ['Ataullah Khan Rifat', '—', 47, 29, 5, 3, '162.07'],
+              ['Md Shafiul Haque Ankon (c)', '—', 8, 8, 1, 0, '100.00'],
+              ['Hasibur Rahman', '—', 21, 10, 1, 2, '210.00'],
+              ['Bayazid Bostame Sony', 'not out', 2, 4, 0, 0, '50.00'],
+              ['Jubair Chowdhury', 'not out', 1, 1, 0, 0, '100.00']
+            ],
+            bowl: [
+              ['Ejajur Rahman Redoy', '2.0', 10, 1, '5.00'],
+              ['Nahid Hasan', '3.0', 14, 2, '4.67'],
+              ['Sufian Ahmed (c)', '2.0', 35, 0, '17.50'],
+              ['Sazzad Tanveer', '2.0', 35, 0, '17.50'],
+              ['Borshon Gomes', '0.3', 3, 1, '6.00']
+            ]
+          }
+        ]
+      },
+      {
+        label: 'Super Three · Match 2', date: '7 Jun 2026',
+        team1: 'Bullet Club', team2: 'Panoti Boys',
+        score1: '69/5 (10 Ov)', score2: '70/3 (9.1 Ov)',
+        winner: 'Panoti Boys', result: 'Panoti Boys won by 7 wickets', toss: 'Not recorded',
+        bestBat: [['Dipta Roy', '28* (30)'], ['Sufian Ahmed', '20* (18)'], ['Mohammed Ridowan', '14 (17)']],
+        bestBowl: [['Ejajur Rahman Redoy', '2/18 (2.0)'], ['Hasibul Hasan Shanto', '1/12 (3.0)'], ['Tanzim Ahmed', '1/10 (2.0)']],
+        squads: {
+          'Bullet Club': ['Mohammed Ridowan (c)', 'Hasibul Hasan Shanto', 'Tanzim Ahmed', 'Dipta Roy', 'Md Noman', 'Md Shafayet Hossen Chowdhury', 'Biplob Hossain'],
+          'Panoti Boys': ['Sufian Ahmed (c)', 'Jayed Akbar Sumon', 'Nahid Hasan', 'Sazzad Tanveer', 'Ejajur Rahman Redoy', 'Shahriar Ahmed', 'Borshon Gomes']
+        },
+        innings: [
+          {
+            team: 'Bullet Club', score: '69/5 (10 Ov)', extras: '17 (wd 15, nb 2)', fow: '—',
+            bat: [
+              ['Hasibul Hasan Shanto', '—', 3, 6, 0, 0, '50.00'],
+              ['Tanzim Ahmed', '—', 7, 6, 0, 0, '116.67'],
+              ['Md Noman', '—', 0, 1, 0, 0, '0.00'],
+              ['Dipta Roy', 'not out', 28, 30, 2, 1, '93.33'],
+              ['Mohammed Ridowan (c)', '—', 14, 17, 1, 0, '82.35'],
+              ['Md Shafayet Hossen Chowdhury', '—', 0, 2, 0, 0, '0.00'],
+              ['Biplob Hossain', 'not out', 0, 0, 0, 0, '—']
+            ],
+            bowl: [
+              ['Sufian Ahmed (c)', '2.0', 14, 1, '7.00'],
+              ['Ejajur Rahman Redoy', '2.0', 18, 2, '9.00'],
+              ['Nahid Hasan', '3.0', 23, 1, '7.67'],
+              ['Sazzad Tanveer', '1.0', 9, 0, '9.00'],
+              ['Borshon Gomes', '2.0', 5, 0, '2.50']
+            ]
+          },
+          {
+            team: 'Panoti Boys', score: '70/3 (9.1 Ov)', extras: '7 (wd 5, nb 2)', fow: '—',
+            bat: [
+              ['Jayed Akbar Sumon', '—', 18, 18, 1, 0, '100.00'],
+              ['Nahid Hasan', '—', 17, 14, 1, 0, '121.43'],
+              ['Ejajur Rahman Redoy', '—', 6, 3, 1, 1, '200.00'],
+              ['Sufian Ahmed (c)', 'not out', 20, 18, 1, 1, '111.11'],
+              ['Shahriar Ahmed', 'not out', 2, 4, 0, 0, '50.00']
+            ],
+            bowl: [
+              ['Mohammed Ridowan (c)', '2.0', 20, 0, '10.00'],
+              ['Hasibul Hasan Shanto', '3.0', 12, 1, '4.00'],
+              ['Tanzim Ahmed', '2.0', 10, 1, '5.00'],
+              ['Md Shafayet Hossen Chowdhury', '2.0', 21, 1, '10.50'],
+              ['Dipta Roy', '0.1', 7, 0, '42.00']
+            ]
+          }
+        ]
+      },
+      {
+        label: 'Super Three · Match 3', date: '7 Jun 2026',
+        team1: 'Bullet Club', team2: 'Living Legends',
+        score1: '101/2 (10 Ov)', score2: '75/6 (10 Ov)',
+        winner: 'Bullet Club', result: 'Bullet Club won by 26 runs', toss: 'Not recorded',
+        bestBat: [['Ataullah Khan Rifat', '41 (24), 4 sixes'], ['Tanzim Ahmed', '31* (16), 3 sixes'], ['Mohammed Ridowan', '29* (20), 2 sixes']],
+        bestBowl: [['Mohammed Ridowan', '3/13 (2.0)'], ['Hasibul Hasan Shanto', '2/12 (2.0)'], ['Bayazid Bostame Sony', '2/12 (2.0)']],
+        squads: {
+          'Bullet Club': ['Mohammed Ridowan (c)', 'Hasibul Hasan Shanto', 'Tanzim Ahmed', 'Dipta Roy', 'Md Shafayet Hossen Chowdhury'],
+          'Living Legends': ['Ataullah Khan Rifat (c)', 'Bayazid Bostame Sony', 'Hasibur Rahman', 'Jubair Chowdhury', 'Md Shafiul Haque Ankon', 'Mohammad Akash', 'S M Kamrul Hasan Manik']
+        },
+        innings: [
+          {
+            team: 'Bullet Club', score: '101/2 (10 Ov)', extras: '7 (wd 4, nb 3)', fow: '—',
+            bat: [
+              ['Hasibul Hasan Shanto', '—', 6, 6, 1, 0, '100.00'],
+              ['Dipta Roy', '—', 28, 21, 1, 2, '133.33'],
+              ['Mohammed Ridowan (c)', 'not out', 29, 20, 1, 2, '145.00'],
+              ['Tanzim Ahmed', 'not out', 31, 16, 1, 3, '193.75']
+            ],
+            bowl: [
+              ['Mohammad Akash', '2.0', 21, 0, '10.50'],
+              ['Bayazid Bostame Sony', '2.0', 12, 2, '6.00'],
+              ['Ataullah Khan Rifat (c)', '3.0', 37, 0, '12.33'],
+              ['Hasibur Rahman', '1.0', 10, 0, '10.00'],
+              ['Jubair Chowdhury', '2.0', 21, 0, '10.50']
+            ]
+          },
+          {
+            team: 'Living Legends', score: '75/6 (10 Ov)', extras: '13 (wd 8, nb 5)', fow: '—',
+            bat: [
+              ['Hasibur Rahman', '—', 11, 13, 1, 0, '84.62'],
+              ['Ataullah Khan Rifat', '—', 41, 24, 1, 4, '170.83'],
+              ['S M Kamrul Hasan Manik', 'not out', 5, 15, 0, 0, '33.33'],
+              ['Mohammad Akash', '—', 0, 3, 0, 0, '0.00'],
+              ['Bayazid Bostame Sony', '—', 5, 6, 0, 0, '83.33'],
+              ['Jubair Chowdhury', '—', 0, 1, 0, 0, '0.00'],
+              ['Md Shafiul Haque Ankon (c)', '—', 0, 3, 0, 0, '0.00']
+            ],
+            bowl: [
+              ['Mohammed Ridowan (c)', '2.0', 13, 3, '6.50'],
+              ['Hasibul Hasan Shanto', '2.0', 12, 2, '6.00'],
+              ['Tanzim Ahmed', '3.0', 9, 0, '3.00'],
+              ['Md Shafayet Hossen Chowdhury', '2.0', 23, 1, '11.50'],
+              ['Dipta Roy', '1.0', 18, 0, '18.00']
+            ]
+          }
+        ]
+      },
+      {
+        label: 'Final', date: '7 Jun 2026',
+        team1: 'Bullet Club', team2: 'Panoti Boys',
+        score1: '97/6 (9.4 Ov)', score2: '102/2 (7.0 Ov)',
+        winner: 'Panoti Boys', result: 'Panoti Boys won by 8 wickets', toss: 'Not recorded',
+        bestBat: [['Jayed Akbar Sumon', '63* (21), 7 sixes'], ['Hasibul Hasan Shanto', '52 (27), 5 sixes'], ['Dipta Roy', '27 (17), 2 sixes']],
+        bestBowl: [['Sazzad Tanveer', '3/17 (2.4)'], ['Nahid Hasan', '1/19 (3.0)'], ['Borshon Gomes', '1/15 (1.0)']],
+        squads: {
+          'Bullet Club': ['Mohammed Ridowan (c)', 'Hasibul Hasan Shanto', 'Tanzim Ahmed', 'Dipta Roy', 'Md Noman', 'Md Shafayet Hossen Chowdhury', 'Biplob Hossain'],
+          'Panoti Boys': ['Sufian Ahmed (c)', 'Jayed Akbar Sumon', 'Nahid Hasan', 'Sazzad Tanveer', 'Ejajur Rahman Redoy', 'Shahriar Ahmed', 'Borshon Gomes']
+        },
+        innings: [
+          {
+            team: 'Bullet Club', score: '97/6 (9.4 Ov)', extras: '7 (wd 5, nb 2)', fow: '—',
+            bat: [
+              ['Hasibul Hasan Shanto', '—', 52, 27, 2, 5, '192.59'],
+              ['Dipta Roy', '—', 27, 17, 1, 2, '158.82'],
+              ['Biplob Hossain', '—', 1, 2, 0, 0, '50.00'],
+              ['Tanzim Ahmed', '—', 0, 2, 0, 0, '0.00'],
+              ['Mohammed Ridowan (c)', '—', 1, 2, 0, 0, '50.00'],
+              ['Md Shafayet Hossen Chowdhury', 'not out', 7, 7, 1, 0, '100.00'],
+              ['Md Noman', '—', 2, 3, 0, 0, '66.67']
+            ],
+            bowl: [
+              ['Sufian Ahmed (c)', '2.0', 31, 0, '15.50'],
+              ['Ejajur Rahman Redoy', '1.0', 15, 0, '15.00'],
+              ['Nahid Hasan', '3.0', 19, 1, '6.33'],
+              ['Sazzad Tanveer', '2.4', 17, 3, '6.38'],
+              ['Borshon Gomes', '1.0', 15, 1, '15.00']
+            ]
+          },
+          {
+            team: 'Panoti Boys', score: '102/2 (7.0 Ov)', extras: '10 (wd 8, nb 2)', fow: '—',
+            bat: [
+              ['Jayed Akbar Sumon', 'not out', 63, 21, 3, 7, '300.00'],
+              ['Sufian Ahmed (c)', '—', 0, 1, 0, 0, '0.00'],
+              ['Sazzad Tanveer', '—', 12, 14, 2, 0, '85.71'],
+              ['Nahid Hasan', 'not out', 17, 8, 2, 0, '212.50']
+            ],
+            bowl: [
+              ['Mohammed Ridowan (c)', '1.0', 13, 1, '13.00'],
+              ['Biplob Hossain', '1.0', 15, 0, '15.00'],
+              ['Tanzim Ahmed', '2.0', 12, 0, '6.00'],
+              ['Md Shafayet Hossen Chowdhury', '2.0', 41, 1, '20.50'],
+              ['Hasibul Hasan Shanto', '1.0', 21, 0, '21.00']
+            ]
+          }
+        ]
+      }
+    ]
   }
 ];
 
