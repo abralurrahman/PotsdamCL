@@ -18,8 +18,8 @@ CHAMPION    = {'Hasibul Hasan Shanto', 'Ataullah Khan Rifat', 'Dipta Roy',
                'Ejajur Rahman Redoy', 'Sazzad Tanveer', 'Imtiaz Ahmed',
                'Md Nahian Imtiaz Hasan'}
 RUNNER_UP   = {'Nahid Hasan', 'Hasibur Rahman', 'Md Khalid Mahfuz', 'Md Noman',
-               'Shahriar Ahmed', 'Sufian Ahmed'}
-PARTICIPANT = {'Mohammad Akash', 'Amamul Hasan', 'Borshon Gomes', 'GR Pranto',
+               'Shahriar Ahmed', 'Sufian Ahmed', 'Nahid Hasan (Junior)'}
+PARTICIPANT = {'Mohammad Akash', 'Amam ul Hasan', 'Borshon Gomes', 'GR Pranto',
                'Iftekhar A', 'Jayed Akbar Sumon', 'Tanzim Ahmed'}
 # Players not in any set get the inactive penalty (-4%)
 # ─────────────────────────────────────────────────────────────────────────────

@@ -3,6 +3,7 @@ Updates player stats in index.html RAW data based on PCL4 tournament scorecards.
 Teams: The Sage Warriors (SW), The Spectators of the Grand Finale (SOTGF), Sony's Seven (SS)
 Matches: M1 (SOTGF vs SS), M2 (SW vs SOTGF), M3 (SW vs SS), Final (SW vs SOTGF)
 Champion: The Sage Warriors | Runner-up: SOTGF | Participant: Sony's Seven
+Note: "Amamul Hasan" on scorecard = "Amam ul Hasan" in database (same player, name variant)
 """
 import json, re
 
@@ -19,28 +20,6 @@ AR = {p["Player"]: p for p in raw["AllRounders_Ranked"]}
 
 def safe_round(v, d=2):
     return round(v, d)
-
-def add_new_player(name):
-    entry = {
-        "Player": name,
-        "Bat_Rating": 0, "Bowl_Rating": 0, "AllRound_Rating": 0,
-        "Bat_Matches": 0, "Bat_Innings": 0, "Bat_NotOut": 0,
-        "Bat_Runs": 0, "Bat_SR": 0, "Bat_Avg": None,
-        "Bat_HS": "0", "Bat_4s": 0, "Bat_6s": 0,
-        "Bat_30s": 0, "Bat_50s": 0, "Bat_100s": 0, "Bat_Ducks": 0,
-        "Bowl_Matches": 0, "Bowl_Innings": 0, "Bowl_Overs": 0,
-        "Bowl_RunsConceded": 0, "Bowl_Wkts": 0, "Bowl_Econ": 0,
-        "Bowl_SR": None, "Bowl_Avg": None, "Bowl_Best": None,
-        "Bowl_Wides": 0, "Bowl_NoBalls": 0, "Bowl_3w": 0, "Bowl_5w": 0,
-    }
-    bw_entry = dict(entry)
-    ar_entry = dict(entry)
-    raw["Batting_Ranked"].append(entry)
-    raw["Bowling_Ranked"].append(bw_entry)
-    raw["AllRounders_Ranked"].append(ar_entry)
-    BR[name] = entry
-    BW[name] = bw_entry
-    AR[name] = ar_entry
 
 def update_bat(name, add_m, add_inn, add_no, add_runs, add_balls,
                add_4s=0, add_6s=0, add_30s=0, add_50s=0, add_100s=0, add_ducks=0, new_hs=None):
@@ -105,11 +84,6 @@ def update_bowl(name, add_m, add_inn, add_overs, add_runs, add_wkts,
         if new_best is not None:
             b["Bowl_Best"] = new_best
 
-# ── Add new players ───────────────────────────────────────────────────────────
-for name in ["Imtiaz Ahmed", "Md Nahian Imtiaz Hasan",
-             "Md Khalid Mahfuz", "GR Pranto", "Iftekhar A", "Amamul Hasan"]:
-    add_new_player(name)
-
 # ─── THE SAGE WARRIORS (Champion) ────────────────────────────────────────────
 
 # Hasibul Hasan Shanto
@@ -133,7 +107,6 @@ update_bowl("Ataullah Khan Rifat", add_m=3, add_inn=3,
 # bat: M2(49,28b,5×4s,3×6s,30s), M3(14,5b,2×6s), Final(24,13b,1×4s,2×6s)
 update_bat("Dipta Roy", add_m=3, add_inn=3, add_no=0,
            add_runs=87, add_balls=46, add_4s=6, add_6s=7, add_30s=1)
-# bowl: DNB all 3 matches — no bowling update
 
 # Ejajur Rahman Redoy
 # bat: M2(1,1b,NO), M3(6,4b,1×6s,OUT), Final(8,7b,1×6s,OUT)
@@ -148,21 +121,22 @@ update_bowl("Ejajur Rahman Redoy", add_m=3, add_inn=2,
 # bat: M2(2,1b,NO), M3(7,3b,1×6s,OUT), Final(4,2b,1×4s,NO)
 update_bat("Sazzad Tanveer", add_m=3, add_inn=3, add_no=2,
            add_runs=13, add_balls=6, add_4s=1, add_6s=1)
-# bowl: DNB — no bowling update
 
-# Imtiaz Ahmed (NEW)
+# Imtiaz Ahmed — existing player (35 mat pre-PCL4)
 # bat: M2(8,7b,1×6s,OUT), M3(20,16b,2×4s,1×6s,NO), Final(12,7b,1×4s,1×6s,OUT)
+# existing HS "30*" > 20, no HS update
 update_bat("Imtiaz Ahmed", add_m=3, add_inn=3, add_no=1,
-           add_runs=40, add_balls=30, add_4s=3, add_6s=3, new_hs="20*")
+           add_runs=40, add_balls=30, add_4s=3, add_6s=3)
 # bowl: M2(1ov,18r,1w), Final(1ov,5r,0w,1nb)
+# existing best "2/16" > "1/18", no best update
 update_bowl("Imtiaz Ahmed", add_m=3, add_inn=2,
-            add_overs=2.0, add_runs=23, add_wkts=1, add_nb=1, new_best="1/18")
+            add_overs=2.0, add_runs=23, add_wkts=1, add_nb=1)
 
-# Md Nahian Imtiaz Hasan (NEW)
+# Md Nahian Imtiaz Hasan — existing player (8 mat pre-PCL4, HS=3)
 # bat: M2(8,9b,1×4s,OUT), M3(0,1b,NO), Final(1,3b,NO)
+# PCL4 max 8 > existing HS 3 → update HS
 update_bat("Md Nahian Imtiaz Hasan", add_m=3, add_inn=3, add_no=2,
            add_runs=9, add_balls=13, add_4s=1, new_hs="8")
-# bowl: DNB — no bowling update
 
 # ─── THE SPECTATORS OF THE GRAND FINALE (Runner-up) ──────────────────────────
 
@@ -174,13 +148,23 @@ update_bat("Hasibur Rahman", add_m=3, add_inn=3, add_no=1,
 update_bowl("Hasibur Rahman", add_m=3, add_inn=3,
             add_overs=2.1, add_runs=23, add_wkts=1, add_wd=1)
 
-# Nahid Hasan (captain — the registered system player)
+# Nahid Hasan (captain)
 # bat: M1(5,7b,OUT), M2(12,4b,2×6s,NO), Final(6,6b,1×4s,OUT)
 update_bat("Nahid Hasan", add_m=3, add_inn=3, add_no=1,
            add_runs=23, add_balls=17, add_4s=1, add_6s=2)
 # bowl: M1(3ov,38r,0w,2wd,1nb), M2(2ov,20r,1w,2wd,1nb), Final(3ov,30r,2w,4wd,1nb)
 update_bowl("Nahid Hasan", add_m=3, add_inn=3,
             add_overs=8.0, add_runs=88, add_wkts=3, add_wd=8, add_nb=3)
+
+# Nahid Hasan (Junior) — second SOTGF Nahid Hasan (non-captain)
+# bat: M1(1,3b,NO), M2(DNB), Final(6,2b,1×6s,OUT)
+update_bat("Nahid Hasan (Junior)", add_m=3, add_inn=2, add_no=1,
+           add_runs=7, add_balls=5, add_6s=1)
+# bowl: M1(2ov,32r,0w,4wd), M2(2ov,22r,1w,1nb), Final(2ov,33r,1w,2wd)
+# existing best "1/23" → PCL4 best 1/22 is better (same wkts, fewer runs)
+update_bowl("Nahid Hasan (Junior)", add_m=3, add_inn=3,
+            add_overs=6.0, add_runs=87, add_wkts=2, add_wd=6, add_nb=1,
+            new_best="1/22")
 
 # Sufian Ahmed
 # bat: M1(32,14b,1×4s,4×6s,OUT,30s), M2(DNB), Final(1,3b,OUT)
@@ -198,11 +182,11 @@ update_bat("Md Noman", add_m=3, add_inn=1, add_no=1,
 update_bat("Shahriar Ahmed", add_m=3, add_inn=2, add_no=1,
            add_runs=10, add_balls=7, add_6s=1)
 
-# Md Khalid Mahfuz (NEW)
+# Md Khalid Mahfuz — existing player (16 mat pre-PCL4, HS="55*")
 # bat: M1(26,13b,3×6s,NO), M2(24,17b,2×6s,OUT), Final(9,8b,OUT)
+# existing HS "55*" > 26, no HS update
 update_bat("Md Khalid Mahfuz", add_m=3, add_inn=3, add_no=1,
-           add_runs=59, add_balls=38, add_6s=5, new_hs="26*")
-# bowl: DNB — no bowling update
+           add_runs=59, add_balls=38, add_6s=5)
 
 # ─── SONY'S SEVEN (Participant) ───────────────────────────────────────────────
 
@@ -231,24 +215,30 @@ update_bat("Borshon Gomes", add_m=2, add_inn=1, add_no=0,
 update_bowl("Borshon Gomes", add_m=2, add_inn=2,
             add_overs=2.0, add_runs=44, add_wkts=0, add_wd=3, add_nb=1)
 
-# GR Pranto (NEW)
+# GR Pranto — existing player (35 mat pre-PCL4, HS="70*", best="4/13")
 # bat: M1(66,29b,4×4s,6×6s,NO,50s), M3(7,3b,1×6s,OUT)
+# existing HS "70*" > 66, no HS update
 update_bat("GR Pranto", add_m=2, add_inn=2, add_no=1,
-           add_runs=73, add_balls=32, add_4s=4, add_6s=7, add_50s=1, new_hs="66*")
+           add_runs=73, add_balls=32, add_4s=4, add_6s=7, add_50s=1)
 # bowl: M1(2ov,22r,1w,1wd), M3(2ov,35r,0w,1wd,1nb)
+# existing best "4/13" > "1/22", no best update
 update_bowl("GR Pranto", add_m=2, add_inn=2,
-            add_overs=4.0, add_runs=57, add_wkts=1, add_wd=2, add_nb=1, new_best="1/22")
+            add_overs=4.0, add_runs=57, add_wkts=1, add_wd=2, add_nb=1)
 
-# Iftekhar A (NEW) — M1(0,2b,NO), M3(0,3b,NO)
+# Iftekhar A — existing player (21 mat pre-PCL4, HS=12)
+# bat: M1(0,2b,NO), M3(0,3b,NO)
+# existing HS 12 > 0, no HS update
 update_bat("Iftekhar A", add_m=2, add_inn=2, add_no=2,
-           add_runs=0, add_balls=5, new_hs="0*")
+           add_runs=0, add_balls=5)
 
-# Amamul Hasan (NEW) — M1(DNB), M3(0,2b,duck)
-update_bat("Amamul Hasan", add_m=2, add_inn=1, add_no=0,
-           add_runs=0, add_balls=2, add_ducks=1, new_hs="0")
+# Amam ul Hasan (= "Amamul Hasan" on scorecard, same player)
+# bat: M1(DNB), M3(0,2b,duck)
+update_bat("Amam ul Hasan", add_m=2, add_inn=1, add_no=0,
+           add_runs=0, add_balls=2, add_ducks=1)
 # bowl: M1(1ov,19r,1w,2wd,3nb), M3(1ov,15r,0w,3wd,1nb)
-update_bowl("Amamul Hasan", add_m=2, add_inn=2,
-            add_overs=2.0, add_runs=34, add_wkts=1, add_wd=5, add_nb=4, new_best="1/19")
+# existing best "3/19" > "1/19", no best update
+update_bowl("Amam ul Hasan", add_m=2, add_inn=2,
+            add_overs=2.0, add_runs=34, add_wkts=1, add_wd=5, add_nb=4)
 
 # ─── Rebuild sorted lists ─────────────────────────────────────────────────────
 raw["Batting_Ranked"]     = sorted(BR.values(), key=lambda p: p.get("Bat_Rating", 0), reverse=True)
@@ -261,13 +251,14 @@ new_html = re.sub(r'const RAW=\{.*?\};', new_raw_str, html, flags=re.DOTALL)
 with open(HTML_PATH, "w", encoding="utf-8") as f:
     f.write(new_html)
 
-print("Done. Players updated:")
+print("Done. PCL4 stats applied on top of full history.")
 for name in [
     "Hasibul Hasan Shanto", "Ataullah Khan Rifat", "Dipta Roy",
     "Ejajur Rahman Redoy", "Sazzad Tanveer", "Imtiaz Ahmed", "Md Nahian Imtiaz Hasan",
-    "Hasibur Rahman", "Nahid Hasan", "Sufian Ahmed", "Md Noman", "Shahriar Ahmed", "Md Khalid Mahfuz",
+    "Hasibur Rahman", "Nahid Hasan", "Nahid Hasan (Junior)", "Sufian Ahmed",
+    "Md Noman", "Shahriar Ahmed", "Md Khalid Mahfuz",
     "Mohammad Akash", "Jayed Akbar Sumon", "Tanzim Ahmed", "Borshon Gomes",
-    "GR Pranto", "Iftekhar A", "Amamul Hasan"
+    "GR Pranto", "Iftekhar A", "Amam ul Hasan"
 ]:
     p = BR[name]
-    print(f"  {name}: {p['Bat_Runs']}r avg={p.get('Bat_Avg')} sr={p.get('Bat_SR')} | {p.get('Bowl_Wkts','—')}w avg={p.get('Bowl_Avg','—')}")
+    print(f"  {name}: {p['Bat_Matches']}mat {p['Bat_Runs']}r avg={p.get('Bat_Avg')} | {p.get('Bowl_Wkts','—')}w avg={p.get('Bowl_Avg','—')}")
