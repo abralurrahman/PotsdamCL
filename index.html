@@ -580,6 +580,69 @@ th{transition:background .2s}
   *{transition-duration:.01ms!important}
   .mh h1{-webkit-text-fill-color:#fff;color:#fff}
 }
+
+/* ══════════════════════════════════════════════════════════
+   MOBILE & TOUCH REFINEMENTS  ·  proper behaviour on phones
+   ══════════════════════════════════════════════════════════ */
+
+/* Prevent horizontal overflow & double-tap zoom jank from any source */
+html,body{max-width:100%;overflow-x:hidden}
+button,a,.tplayer,.tcard,.pgc,.pc,td,th{-webkit-tap-highlight-color:transparent}
+/* stop iOS auto-zoom on input focus — mobile only, keeps desktop sizing intact */
+@media(max-width:640px){
+  input,select,textarea,.tt input,.fg input,.fg select,.apin,#rs,#ss,#ps{font-size:16px}
+}
+
+/* On TOUCH devices, hover effects must not "stick" after a tap.
+   Replace lifts/sheens with quick press feedback instead. */
+@media (hover:none),(pointer:coarse){
+  .pc:hover,.pgc:hover,.tcard:hover,.ttrn-stat:hover,.mhs:hover,
+  .tplayer:hover,.tmatch:hover,.mb:hover,.tteam:hover{transform:none!important;box-shadow:var(--sh)}
+  .pc:hover::after{left:-150%!important}
+  .pc:hover .pcn2{transform:none!important}
+  .pgc:hover::before{height:4px}
+  nav button:hover::before{left:50%;right:50%}
+  tbody tr:hover td{background:inherit!important}
+  /* tactile press feedback */
+  .pc:active,.pgc:active,.tcard:active,.ttrn-stat:active,.mb:active{transform:scale(.98)!important;transition:transform .1s}
+  .btn:active{transform:scale(.97)}
+  .tplayer:active{transform:scale(.94)}
+}
+
+/* Lighter, cheaper aurora on phones (saves battery / avoids repaint jank) */
+@media(max-width:640px){
+  .aurora span{filter:blur(42px)}
+  .aurora .o1{width:300px;height:300px;left:-90px;top:-100px}
+  .aurora .o2{width:260px;height:260px;opacity:.26}
+  .aurora .o3{width:340px;height:340px;bottom:-140px;opacity:.22}
+  .aurora .o4{width:200px;height:200px;opacity:.16}
+}
+/* Very small / data-saver: drop aurora motion entirely */
+@media(max-width:380px){ .aurora span{animation:none} }
+
+/* Comfortable tap targets (>=44px) & safe-area for notched phones */
+@media(max-width:640px){
+  nav button{min-height:44px}
+  .sg,.tab,.btn{min-height:40px}
+  nav button:hover::before,nav button.active::before{left:7px;right:7px}
+  .totop{width:48px;height:48px;font-size:22px}
+}
+@supports(padding:max(0px)){
+  .totop{right:max(16px,env(safe-area-inset-right));bottom:max(16px,env(safe-area-inset-bottom))}
+  .hi{padding-left:max(14px,env(safe-area-inset-left));padding-right:max(14px,env(safe-area-inset-right))}
+}
+
+/* Scrollable tables: clearer affordance + smoother momentum on iOS */
+.ts{-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain}
+@media(max-width:640px){
+  .ts{position:relative;background:
+    linear-gradient(90deg,#fff 30%,transparent),
+    linear-gradient(90deg,transparent,#fff 70%) 100% 0,
+    radial-gradient(farthest-side at 0 50%,rgba(15,23,42,.12),transparent),
+    radial-gradient(farthest-side at 100% 50%,rgba(15,23,42,.12),transparent) 100% 0;
+    background-repeat:no-repeat;background-size:34px 100%,34px 100%,14px 100%,14px 100%;
+    background-attachment:local,local,scroll,scroll}
+}
 </style>
 </head>
 <body>
