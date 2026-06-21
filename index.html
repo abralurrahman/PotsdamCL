@@ -441,9 +441,150 @@ footer{text-align:center;padding:36px 20px 28px;border-top:1px solid var(--borde
   .tscorecard-body{padding:12px 10px 14px}
   .tmresult-strip{flex-direction:column;align-items:flex-start;gap:4px}
 }
+
+/* ══════════════════════════════════════════════════════════
+   VISUAL ENHANCEMENT LAYER  ·  smooth, interactive, premium
+   (purely additive — no logic/markup data changes)
+   ══════════════════════════════════════════════════════════ */
+
+/* — Ambient animated aurora background (sits behind everything) — */
+.aurora{position:fixed;inset:0;z-index:-2;overflow:hidden;pointer-events:none}
+.aurora span{position:absolute;border-radius:50%;filter:blur(70px);opacity:.5;will-change:transform}
+.aurora .o1{width:520px;height:520px;left:-120px;top:-140px;background:radial-gradient(circle,#6366f1,transparent 70%);animation:float1 22s ease-in-out infinite}
+.aurora .o2{width:460px;height:460px;right:-120px;top:8%;background:radial-gradient(circle,#f97316,transparent 70%);opacity:.32;animation:float2 26s ease-in-out infinite}
+.aurora .o3{width:600px;height:600px;left:30%;bottom:-220px;background:radial-gradient(circle,#7c3aed,transparent 70%);opacity:.28;animation:float3 30s ease-in-out infinite}
+.aurora .o4{width:380px;height:380px;right:18%;bottom:6%;background:radial-gradient(circle,#16a34a,transparent 70%);opacity:.2;animation:float1 28s ease-in-out infinite reverse}
+@keyframes float1{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(60px,40px) scale(1.12)}}
+@keyframes float2{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-50px,60px) scale(1.08)}}
+@keyframes float3{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(40px,-50px) scale(1.15)}}
+body{background:var(--bg)}
+body::before{content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:linear-gradient(180deg,rgba(238,242,255,.4),rgba(238,242,255,.85) 40%,rgba(238,242,255,.96));}
+
+/* — Top scroll-progress bar — */
+.scrollprog{position:fixed;top:0;left:0;height:3px;width:0;z-index:500;
+  background:linear-gradient(90deg,#1e40af,#7c3aed,#f97316);box-shadow:0 0 12px rgba(124,58,237,.6);
+  transition:width .08s linear}
+
+/* — Smooth custom scrollbar — */
+*{scrollbar-width:thin;scrollbar-color:#a5b4fc transparent}
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:linear-gradient(180deg,#818cf8,#6366f1);border-radius:10px;border:2px solid var(--bg)}
+::-webkit-scrollbar-thumb:hover{background:linear-gradient(180deg,#6366f1,#4f46e5)}
+
+/* — Header: subtle frosted depth + animated logo sheen — */
+header{backdrop-filter:blur(10px)}
+.lm{position:relative;overflow:hidden}
+.lm::after{content:'';position:absolute;top:0;left:-120%;width:60%;height:100%;
+  background:linear-gradient(110deg,transparent,rgba(255,255,255,.55),transparent);
+  transform:skewX(-20deg);animation:sheen 5s ease-in-out infinite}
+@keyframes sheen{0%,72%{left:-120%}82%,100%{left:160%}}
+nav button{position:relative;transition:color .2s,border-color .2s}
+nav button::before{content:'';position:absolute;left:50%;right:50%;bottom:0;height:3px;
+  background:linear-gradient(90deg,#f97316,#fbbf24);border-radius:2px;transition:left .25s ease,right .25s ease}
+nav button:hover::before,nav button.active::before{left:14px;right:14px}
+nav button.active{border-bottom-color:transparent!important}
+
+/* — Hero: animated gradient title + drifting glow + interactive stats — */
+.mh h1{background:linear-gradient(100deg,#fff 20%,#c7d2fe 40%,#fbbf24 55%,#fff 75%);
+  background-size:220% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  animation:titleShine 7s linear infinite}
+@keyframes titleShine{to{background-position:220% center}}
+.mh::before{animation:heroGlow 14s ease-in-out infinite alternate}
+@keyframes heroGlow{0%{transform:translate(0,0)}100%{transform:translate(-30px,20px)}}
+.mhs{transition:transform .3s cubic-bezier(.16,1,.3,1),background .3s}
+.mhs:hover{transform:translateY(-3px)}
+.mhs:hover .mhsv{text-shadow:0 0 22px rgba(125,211,252,.6)}
+.mhsv{transition:text-shadow .3s}
+
+/* — Section header animated accent — */
+.st{position:relative;padding-left:14px}
+.st::before{content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);
+  width:5px;height:78%;border-radius:3px;background:linear-gradient(180deg,#1e40af,#7c3aed,#f97316);
+  box-shadow:0 0 10px rgba(124,58,237,.45)}
+
+/* — Spring transitions everywhere for that "smooth" feel — */
+.pc,.pgc,.tcard,.ttrn-stat,.mb,.tmatch,.tteam{transition:transform .35s cubic-bezier(.16,1,.3,1),box-shadow .35s cubic-bezier(.16,1,.3,1),border-color .25s}
+
+/* — Podium cards: sheen sweep + deeper colored glow on hover — */
+.pc::after{content:'';position:absolute;top:0;left:-150%;width:75%;height:100%;
+  background:linear-gradient(110deg,transparent,rgba(255,255,255,.28),transparent);
+  transform:skewX(-20deg);transition:left .7s ease;pointer-events:none;z-index:1}
+.pc:hover::after{left:160%}
+.pc.r1:hover{box-shadow:0 26px 60px rgba(217,119,6,.45)}
+.pc.r2:hover{box-shadow:0 26px 60px rgba(30,64,175,.45)}
+.pc.r3:hover{box-shadow:0 26px 60px rgba(234,88,12,.45)}
+.pcn2{transition:transform .5s cubic-bezier(.16,1,.3,1),color .3s}
+.pc:hover .pcn2{transform:scale(1.12) rotate(-4deg);color:rgba(255,255,255,.2)}
+
+/* — Animate rank/progress bars filling smoothly on render — */
+.pcrbf{transition:width 1.1s cubic-bezier(.16,1,.3,1);position:relative;overflow:hidden}
+.pcrbf::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.7),transparent);
+  transform:translateX(-100%);animation:barShine 2.6s ease-in-out infinite}
+@keyframes barShine{0%{transform:translateX(-100%)}60%,100%{transform:translateX(220%)}}
+.rb{transition:width 1s cubic-bezier(.16,1,.3,1)}
+
+/* — Table: gentle row reveal + sliding hover accent — */
+@keyframes rowIn{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
+tbody tr{animation:rowIn .35s ease both}
+tbody tr td:first-child{position:relative}
+tbody tr td:first-child::before{content:'';position:absolute;left:0;top:0;bottom:0;width:0;
+  background:linear-gradient(180deg,#1e40af,#7c3aed);transition:width .2s ease}
+tbody tr:hover td:first-child::before{width:3px}
+th{transition:background .2s}
+
+/* — Player grid cards: lift + animated top bar — */
+.pgc::before{transition:height .25s ease,opacity .25s}
+.pgc:hover::before{height:6px}
+.pgc:hover{transform:translateY(-4px) scale(1.015)}
+
+/* — Buttons: shine + press feedback + ripple host — */
+.btn,.sg,.tab,nav button,.tcard,.pgc,.mc{position:relative;overflow:hidden}
+.btn{transition:transform .15s,box-shadow .2s,background .2s}
+.btn:active{transform:translateY(1px) scale(.98)}
+.bp::before{content:'';position:absolute;top:0;left:-120%;width:50%;height:100%;
+  background:linear-gradient(110deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-20deg);transition:left .6s ease}
+.bp:hover::before{left:150%}
+.ripple{position:absolute;border-radius:50%;transform:scale(0);pointer-events:none;
+  background:rgba(255,255,255,.45);animation:rippleAnim .6s ease-out forwards;mix-blend-mode:overlay}
+@keyframes rippleAnim{to{transform:scale(2.4);opacity:0}}
+
+/* — Modal: richer entrance — */
+.mo{animation:modalIn .35s cubic-bezier(.16,1,.3,1)!important}
+@keyframes modalIn{from{transform:translateY(24px) scale(.96);opacity:0}to{transform:translateY(0) scale(1);opacity:1}}
+.ov{transition:backdrop-filter .3s}
+
+/* — Tournament cards & stats interactive lift — */
+.tcard:hover{transform:translateY(-4px)}
+.ttrn-stat:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(30,64,175,.16)}
+.tplayer{transition:transform .15s,background .15s}
+.tplayer:hover{transform:translateY(-2px)}
+
+/* — Floating scroll-to-top button — */
+.totop{position:fixed;right:22px;bottom:22px;width:46px;height:46px;border-radius:50%;border:none;cursor:pointer;
+  background:linear-gradient(135deg,#1e40af,#7c3aed);color:#fff;font-size:20px;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 8px 26px rgba(30,64,175,.45);opacity:0;transform:translateY(20px) scale(.8);pointer-events:none;
+  transition:opacity .3s,transform .35s cubic-bezier(.16,1,.3,1);z-index:400}
+.totop.show{opacity:1;transform:translateY(0) scale(1);pointer-events:auto}
+.totop:hover{transform:translateY(-3px) scale(1.08);box-shadow:0 12px 32px rgba(124,58,237,.6)}
+@media(max-width:640px){.totop{right:14px;bottom:14px;width:42px;height:42px}}
+
+/* — Live badge soft glow ring — */
+.sb{position:relative}
+
+/* — Respect reduced-motion — */
+@media(prefers-reduced-motion:reduce){
+  .aurora span,.lm::after,.mh h1,.mh::before,.pcrbf::after,tbody tr,.totop{animation:none!important}
+  .pc::after,.bp::before{display:none}
+  *{transition-duration:.01ms!important}
+  .mh h1{-webkit-text-fill-color:#fff;color:#fff}
+}
 </style>
 </head>
 <body>
+<div class="aurora" aria-hidden="true"><span class="o1"></span><span class="o2"></span><span class="o3"></span><span class="o4"></span></div>
+<div class="scrollprog" id="scrollprog"></div>
 <header>
   <div class="hi">
     <a href="#" class="logo" onclick="showPage('rankings')">
@@ -1341,6 +1482,63 @@ init();
 
 </script>
 <script src="tournaments.js"></script>
+<script>
+/* ── Interaction & motion layer (additive, defensive) ───────────── */
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* Top scroll-progress bar */
+  var prog = document.getElementById('scrollprog');
+  /* Floating scroll-to-top button */
+  var top = document.createElement('button');
+  top.className = 'totop'; top.setAttribute('aria-label','Back to top'); top.innerHTML = '↑';
+  top.onclick = function(){ window.scrollTo({top:0, behavior: reduce ? 'auto' : 'smooth'}); };
+  document.body.appendChild(top);
+
+  function onScroll(){
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    var y = window.scrollY || window.pageYOffset;
+    if(prog) prog.style.width = (h>0 ? (y/h*100) : 0) + '%';
+    top.classList.toggle('show', y > 380);
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  window.addEventListener('resize', onScroll, {passive:true});
+  onScroll();
+
+  /* Material-style ripple on interactive elements (event delegation) */
+  if(!reduce){
+    document.addEventListener('pointerdown', function(e){
+      var el = e.target.closest('.btn,.sg,.tab,nav button,.tcard,.pgc,.mc,.totop');
+      if(!el) return;
+      var r = el.getBoundingClientRect();
+      var size = Math.max(r.width, r.height);
+      var s = document.createElement('span');
+      s.className = 'ripple';
+      s.style.width = s.style.height = size + 'px';
+      s.style.left = (e.clientX - r.left - size/2) + 'px';
+      s.style.top  = (e.clientY - r.top  - size/2) + 'px';
+      el.appendChild(s);
+      setTimeout(function(){ s.remove(); }, 620);
+    }, {passive:true});
+  }
+
+  /* Subtle 3D tilt on podium cards for an interactive feel */
+  if(!reduce){
+    document.addEventListener('mousemove', function(e){
+      var card = e.target.closest('.pc');
+      if(!card){ return; }
+      var r = card.getBoundingClientRect();
+      var px = (e.clientX - r.left) / r.width - .5;
+      var py = (e.clientY - r.top) / r.height - .5;
+      card.style.transform = 'translateY(-5px) perspective(800px) rotateX(' + (-py*7) + 'deg) rotateY(' + (px*7) + 'deg)';
+    }, {passive:true});
+    document.addEventListener('mouseout', function(e){
+      var card = e.target.closest('.pc');
+      if(card){ card.style.transform = ''; }
+    }, {passive:true});
+  }
+})();
+</script>
 <script>
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('./sw.js', { scope: './' });
