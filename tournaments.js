@@ -335,6 +335,231 @@ const TOURNAMENT_SCORECARDS = [
         ]
       }
     ]
+  },
+  {
+    id: 't4',
+    name: 'PCL Season 4 - 2026',
+    date: '21 Jun 2026',
+    format: '3 Teams - Super Three + Final',
+    winner: 'The Sage Warriors',
+    teams: [
+      { name: 'The Sage Warriors', place: 1, players: ['Hasibul Hasan Shanto', 'Ataullah Khan Rifat', 'Dipta Roy', 'Ejajur Rahman Redoy', 'Imtiaz Ahmed', 'Md Nahian Imtiaz Hasan', 'Sazzad Tanveer'] },
+      { name: 'The Spectators of the Grand Finale', place: 2, players: ['Nahid Hasan', 'Hasibur Rahman', 'Md Khalid Mahfuz', 'Md Noman', 'Nahid Hasan (Junior)', 'Shahriar Ahmed', 'Sufian Ahmed'] },
+      { name: 'Sony\'s Seven', place: 3, players: ['Mohammad Akash', 'Amam ul Hasan', 'Borshon Gomes', 'GR Pranto', 'Iftekhar A', 'Jayed Akbar Sumon', 'Tanzim Ahmed'] }
+    ],
+    matches: [
+      {
+        label: 'Match 1', date: '2026-06-21, 07:39 AM UTC',
+        team1: 'The Spectators of the Grand Finale', team2: 'Sony\'s Seven',
+        score1: '107/4 (8.0 Ov)', score2: '108/0 (7.1 Ov)',
+        winner: 'Sony\'s Seven', result: 'Sony\'s Seven won by 6 wickets',
+        toss: 'Sony\'s Seven opt to field',
+        bestBat: [['GR Pranto', '66* (29), 4 fours, 6 sixes'], ['Sufian Ahmed', '32 (14), 4 sixes'], ['Jayed Akbar Sumon', '31 ret (14), 4 sixes']],
+        bestBowl: [['Tanzim Ahmed', '2/26 (3.0)'], ['GR Pranto', '1/22 (2.0)'], ['Amam ul Hasan', '1/19 (1.0)']],
+        squads: {
+          'The Spectators of the Grand Finale': ['Nahid Hasan (c)', 'Hasibur Rahman', 'Md Khalid Mahfuz', 'Md Noman', 'Nahid Hasan (Junior)', 'Shahriar Ahmed', 'Sufian Ahmed'],
+          'Sony\'s Seven': ['Mohammad Akash (c)', 'Amam ul Hasan (wk)', 'Borshon Gomes', 'GR Pranto', 'Iftekhar A', 'Jayed Akbar Sumon', 'Tanzim Ahmed']
+        },
+        innings: [
+          {
+            team: 'The Spectators of the Grand Finale', score: '107/4 (8.0 Ov)',
+            extras: '10 (nb 5, wd 5)',
+            fow: '39-1 (Hasibur Rahman, 3 ov), 63-2 (Sufian Ahmed, 4.2 ov), 70-3 (Shahriar Ahmed, 4.5 ov), 96-4 (Nahid Hasan, 7.3 ov)',
+            bat: [
+              ['Hasibur Rahman', 'c Mohammad Akash b GR Pranto', 25, 11, 5, 0, '227.27'],
+              ['Sufian Ahmed', 'c †Amam ul Hasan b Tanzim Ahmed', 32, 14, 1, 4, '228.57'],
+              ['Shahriar Ahmed', 'c Jayed Akbar Sumon b Tanzim Ahmed', 8, 5, 0, 1, '160.00'],
+              ['Nahid Hasan (c)', 'c Jayed Akbar Sumon b Amam ul Hasan', 5, 7, 0, 0, '71.43'],
+              ['Md Khalid Mahfuz', 'not out', 26, 13, 0, 3, '200.00'],
+              ['Nahid Hasan (Junior)', 'not out', 1, 3, 0, 0, '33.33']
+            ],
+            bowl: [
+              ['Mohammad Akash (c)', '1.0', 17, 0, '17.00'],
+              ['Tanzim Ahmed', '3.0', 26, 2, '8.67'],
+              ['GR Pranto', '2.0', 22, 1, '11.00'],
+              ['Borshon Gomes', '1.0', 23, 0, '23.00'],
+              ['Amam ul Hasan', '1.0', 19, 1, '19.00']
+            ]
+          },
+          {
+            team: 'Sony\'s Seven', score: '108/0 (7.1 Ov)',
+            extras: '11 (nb 2, wd 9)',
+            fow: '106-1 (Jayed Akbar Sumon, 6.4 ov - retired hurt)',
+            bat: [
+              ['Jayed Akbar Sumon', 'retired hurt', 31, 14, 0, 4, '221.43'],
+              ['GR Pranto', 'not out', 66, 29, 4, 6, '227.59'],
+              ['Iftekhar A', 'not out', 0, 2, 0, 0, '0.00']
+            ],
+            bowl: [
+              ['Nahid Hasan (Junior)', '2.0', 32, 0, '16.00'],
+              ['Nahid Hasan (c)', '3.0', 38, 0, '12.67'],
+              ['Sufian Ahmed', '2.0', 37, 0, '18.50'],
+              ['Hasibur Rahman', '0.1', 1, 0, '6.00']
+            ]
+          }
+        ]
+      },
+      {
+        label: 'Match 2', date: '2026-06-21, 09:27 AM UTC',
+        team1: 'The Sage Warriors', team2: 'The Spectators of the Grand Finale',
+        score1: '82/5 (8.0 Ov)', score2: '87/2 (7.0 Ov)',
+        winner: 'The Spectators of the Grand Finale', result: 'The Spectators of the Grand Finale won by 4 wickets',
+        toss: 'The Spectators of the Grand Finale opt to field',
+        bestBat: [['Dipta Roy', '49 (28), 5 fours, 3 sixes'], ['Hasibur Rahman', '42* (21), 4 fours, 2 sixes'], ['Md Khalid Mahfuz', '24 (17), 2 sixes']],
+        bestBowl: [['Sufian Ahmed', '3/25 (3.0)'], ['Hasibul Hasan Shanto', '1/15 (2.0)'], ['Nahid Hasan (c)', '1/20 (2.0)']],
+        squads: {
+          'The Sage Warriors': ['Hasibul Hasan Shanto (c)', 'Ataullah Khan Rifat', 'Dipta Roy', 'Ejajur Rahman Redoy', 'Imtiaz Ahmed', 'Md Nahian Imtiaz Hasan', 'Sazzad Tanveer'],
+          'The Spectators of the Grand Finale': ['Nahid Hasan (c)', 'Hasibur Rahman', 'Md Khalid Mahfuz', 'Md Noman', 'Nahid Hasan (Junior)', 'Shahriar Ahmed', 'Sufian Ahmed']
+        },
+        innings: [
+          {
+            team: 'The Sage Warriors', score: '82/5 (8.0 Ov)',
+            extras: '12 (wd 8, nb 4)',
+            fow: '5-1 (Hasibul Hasan Shanto, 0.4 ov), 48-2 (Md Nahian Imtiaz Hasan, 4 ov), 52-3 (Ataullah Khan Rifat, 4.3 ov), 73-4 (Dipta Roy, 7 ov), 79-5 (Imtiaz Ahmed, 7.4 ov)',
+            bat: [
+              ['Hasibul Hasan Shanto (c)', 'b Sufian Ahmed', 2, 5, 0, 0, '40.00'],
+              ['Dipta Roy', 'c Hasibur Rahman b Sufian Ahmed', 49, 28, 5, 3, '175.00'],
+              ['Md Nahian Imtiaz Hasan', 'c Shahriar Ahmed b Nahid Hasan (Junior)', 8, 9, 1, 0, '88.89'],
+              ['Ataullah Khan Rifat', 'c Nahid Hasan (Junior) b Sufian Ahmed', 0, 1, 0, 0, '0.00'],
+              ['Imtiaz Ahmed', 'b Nahid Hasan (c)', 8, 7, 0, 1, '114.29'],
+              ['Sazzad Tanveer', 'not out', 2, 1, 0, 0, '200.00'],
+              ['Ejajur Rahman Redoy', 'not out', 1, 1, 0, 0, '100.00']
+            ],
+            bowl: [
+              ['Sufian Ahmed', '3.0', 25, 3, '8.33'],
+              ['Hasibur Rahman', '1.0', 15, 0, '15.00'],
+              ['Nahid Hasan (Junior)', '2.0', 22, 1, '11.00'],
+              ['Nahid Hasan (c)', '2.0', 20, 1, '10.00']
+            ]
+          },
+          {
+            team: 'The Spectators of the Grand Finale', score: '87/2 (7.0 Ov)',
+            extras: '9 (wd 7, nb 2)',
+            fow: '56-1 (Md Khalid Mahfuz, 4.5 ov), 75-2 (Hasibur Rahman, 6.2 ov)',
+            bat: [
+              ['Hasibur Rahman', 'c Hasibul Hasan Shanto b Imtiaz Ahmed', 42, 21, 4, 2, '200.00'],
+              ['Md Khalid Mahfuz', 'c&b Hasibul Hasan Shanto', 24, 17, 0, 2, '141.18'],
+              ['Md Noman', 'not out', 0, 2, 0, 0, '0.00'],
+              ['Nahid Hasan (c)', 'not out', 12, 4, 0, 2, '300.00']
+            ],
+            bowl: [
+              ['Ejajur Rahman Redoy', '1.0', 23, 0, '23.00'],
+              ['Ataullah Khan Rifat', '3.0', 31, 0, '10.33'],
+              ['Hasibul Hasan Shanto (c)', '2.0', 15, 1, '7.50'],
+              ['Imtiaz Ahmed', '1.0', 18, 1, '18.00']
+            ]
+          }
+        ]
+      },
+      {
+        label: 'Match 3', date: '2026-06-21, 10:59 AM UTC',
+        team1: 'The Sage Warriors', team2: 'Sony\'s Seven',
+        score1: '118/5 (8.0 Ov)', score2: '37/6 (4.4 Ov)',
+        winner: 'The Sage Warriors', result: 'The Sage Warriors won by 81 runs',
+        toss: 'Sony\'s Seven opt to field',
+        bestBat: [['Ataullah Khan Rifat', '60 (20), 1 four, 8 sixes'], ['Imtiaz Ahmed', '20* (16), 2 fours'], ['Dipta Roy', '14 (5), 2 sixes']],
+        bestBowl: [['Ataullah Khan Rifat', '4/13 (2.4)'], ['Tanzim Ahmed', '3/35 (3.0)'], ['Hasibul Hasan Shanto', '2/24 (2.0)']],
+        squads: {
+          'The Sage Warriors': ['Hasibul Hasan Shanto (c)', 'Ataullah Khan Rifat', 'Dipta Roy', 'Ejajur Rahman Redoy', 'Imtiaz Ahmed', 'Md Nahian Imtiaz Hasan', 'Sazzad Tanveer (wk)'],
+          'Sony\'s Seven': ['Mohammad Akash (c)', 'Amam ul Hasan', 'Borshon Gomes', 'GR Pranto', 'Iftekhar A', 'Jayed Akbar Sumon', 'Tanzim Ahmed']
+        },
+        innings: [
+          {
+            team: 'The Sage Warriors', score: '118/5 (8.0 Ov)',
+            extras: '11 (wd 9, nb 2)',
+            fow: '0-1 (Hasibul Hasan Shanto, 0.1 ov), 11-2 (Sazzad Tanveer, 0.5 ov), 33-3 (Dipta Roy, 2.1 ov), 96-4 (Ataullah Khan Rifat, 6 ov), 118-5 (Ejajur Rahman Redoy, 7.5 ov)',
+            bat: [
+              ['Hasibul Hasan Shanto (c)', 'b Mohammad Akash', 0, 1, 0, 0, '0.00'],
+              ['Dipta Roy', 'b Tanzim Ahmed', 14, 5, 0, 2, '280.00'],
+              ['Sazzad Tanveer (wk)', 'c Tanzim Ahmed b Mohammad Akash', 7, 3, 0, 1, '233.33'],
+              ['Ataullah Khan Rifat', 'c&b Tanzim Ahmed', 60, 20, 1, 8, '300.00'],
+              ['Imtiaz Ahmed', 'not out', 20, 16, 2, 1, '125.00'],
+              ['Ejajur Rahman Redoy', 'b Tanzim Ahmed', 6, 4, 0, 1, '150.00'],
+              ['Md Nahian Imtiaz Hasan', 'not out', 0, 1, 0, 0, '0.00']
+            ],
+            bowl: [
+              ['Mohammad Akash (c)', '1.0', 12, 2, '12.00'],
+              ['GR Pranto', '2.0', 35, 0, '17.50'],
+              ['Tanzim Ahmed', '3.0', 35, 3, '11.67'],
+              ['Borshon Gomes', '1.0', 21, 0, '21.00'],
+              ['Amam ul Hasan', '1.0', 15, 0, '15.00']
+            ]
+          },
+          {
+            team: 'Sony\'s Seven', score: '37/6 (4.4 Ov)',
+            extras: '6 (wd 6)',
+            fow: '10-1 (GR Pranto, 0.5 ov), 23-2 (Jayed Akbar Sumon, 1.3 ov), 29-3 (Amam ul Hasan, 2.1 ov), 29-4 (Mohammad Akash, 2.2 ov), 34-5 (Tanzim Ahmed, 3.3 ov), 37-6 (Borshon Gomes, 4.4 ov)',
+            bat: [
+              ['Jayed Akbar Sumon', 'c Sazzad Tanveer b Hasibul Hasan Shanto', 14, 5, 0, 2, '280.00'],
+              ['GR Pranto', 'c Imtiaz Ahmed b Ataullah Khan Rifat', 7, 3, 0, 1, '233.33'],
+              ['Amam ul Hasan', 'c †Sazzad Tanveer b Ataullah Khan Rifat', 0, 2, 0, 0, '0.00'],
+              ['Tanzim Ahmed', 'c Dipta Roy b Hasibul Hasan Shanto', 9, 8, 1, 0, '112.50'],
+              ['Mohammad Akash (c)', 'c †Sazzad Tanveer b Ataullah Khan Rifat', 0, 1, 0, 0, '0.00'],
+              ['Borshon Gomes', 'c †Sazzad Tanveer b Ataullah Khan Rifat', 1, 6, 0, 0, '16.67'],
+              ['Iftekhar A', 'not out', 0, 3, 0, 0, '0.00']
+            ],
+            bowl: [
+              ['Ataullah Khan Rifat', '2.4', 13, 4, '4.88'],
+              ['Hasibul Hasan Shanto (c)', '2.0', 24, 2, '12.00']
+            ]
+          }
+        ]
+      },
+      {
+        label: 'Final', date: '2026-06-21, 12:24 PM UTC',
+        team1: 'The Sage Warriors', team2: 'The Spectators of the Grand Finale',
+        score1: '87/5 (8.0 Ov)', score2: '79/4 (8.0 Ov)',
+        winner: 'The Sage Warriors', result: 'The Sage Warriors won by 8 runs',
+        toss: 'The Spectators of the Grand Finale opt to field',
+        bestBat: [['Hasibur Rahman', '52* (28), 4 fours, 3 sixes'], ['Ataullah Khan Rifat', '28 (13), 2 fours, 2 sixes'], ['Dipta Roy', '24 (13), 1 four, 2 sixes']],
+        bestBowl: [['Ejajur Rahman Redoy', '3/16 (2.0)'], ['Nahid Hasan (c)', '2/30 (3.0)'], ['Hasibur Rahman', '1/7 (1.0)']],
+        squads: {
+          'The Sage Warriors': ['Hasibul Hasan Shanto (c)', 'Ataullah Khan Rifat', 'Dipta Roy', 'Ejajur Rahman Redoy', 'Imtiaz Ahmed', 'Md Nahian Imtiaz Hasan', 'Sazzad Tanveer'],
+          'The Spectators of the Grand Finale': ['Nahid Hasan (c)', 'Hasibur Rahman', 'Md Khalid Mahfuz', 'Md Noman', 'Nahid Hasan (Junior)', 'Shahriar Ahmed', 'Sufian Ahmed']
+        },
+        innings: [
+          {
+            team: 'The Sage Warriors', score: '87/5 (8.0 Ov)',
+            extras: '8 (wd 7, nb 1)',
+            fow: '11-1 (Hasibul Hasan Shanto, 1.4 ov), 29-2 (Ejajur Rahman Redoy, 3.3 ov), 46-3 (Dipta Roy, 4.4 ov), 73-4 (Imtiaz Ahmed, 7 ov), 80-5 (Ataullah Khan Rifat, 7.2 ov)',
+            bat: [
+              ['Dipta Roy', 'c Hasibur Rahman b Sufian Ahmed', 24, 13, 1, 2, '184.62'],
+              ['Hasibul Hasan Shanto (c)', 'c Sufian Ahmed b Nahid Hasan (c)', 2, 4, 0, 0, '50.00'],
+              ['Ejajur Rahman Redoy', 'c Nahid Hasan (Junior) b Hasibur Rahman', 8, 7, 0, 1, '114.29'],
+              ['Ataullah Khan Rifat', 'c Nahid Hasan (c) b Nahid Hasan (Junior)', 28, 13, 2, 2, '215.38'],
+              ['Imtiaz Ahmed', 'c Hasibur Rahman b Nahid Hasan (c)', 12, 7, 1, 1, '171.43'],
+              ['Sazzad Tanveer', 'not out', 4, 2, 1, 0, '200.00'],
+              ['Md Nahian Imtiaz Hasan', 'not out', 1, 3, 0, 0, '33.33']
+            ],
+            bowl: [
+              ['Sufian Ahmed', '2.0', 17, 1, '8.50'],
+              ['Nahid Hasan (c)', '3.0', 30, 2, '10.00'],
+              ['Nahid Hasan (Junior)', '2.0', 33, 1, '16.50'],
+              ['Hasibur Rahman', '1.0', 7, 1, '7.00']
+            ]
+          },
+          {
+            team: 'The Spectators of the Grand Finale', score: '79/4 (8.0 Ov)',
+            extras: '3 (wd 2, nb 1)',
+            fow: '11-1 (Md Khalid Mahfuz, 1.3 ov), 25-2 (Nahid Hasan, 3.3 ov), 48-3 (Sufian Ahmed, 5.1 ov), 54-4 (Nahid Hasan (Junior), 5.3 ov)',
+            bat: [
+              ['Hasibur Rahman', 'not out', 52, 28, 4, 3, '185.71'],
+              ['Md Khalid Mahfuz', 'c Dipta Roy b Hasibul Hasan Shanto', 9, 8, 0, 0, '112.50'],
+              ['Nahid Hasan (c)', 'c Dipta Roy b Ejajur Rahman Redoy', 6, 6, 1, 0, '100.00'],
+              ['Sufian Ahmed', 'c Imtiaz Ahmed b Ejajur Rahman Redoy', 1, 3, 0, 0, '33.33'],
+              ['Nahid Hasan (Junior)', 'c Sazzad Tanveer b Ejajur Rahman Redoy', 6, 2, 0, 1, '300.00'],
+              ['Shahriar Ahmed', 'not out', 2, 2, 0, 0, '100.00']
+            ],
+            bowl: [
+              ['Ataullah Khan Rifat', '3.0', 35, 0, '11.67'],
+              ['Hasibul Hasan Shanto (c)', '2.0', 23, 1, '11.50'],
+              ['Ejajur Rahman Redoy', '2.0', 16, 3, '8.00'],
+              ['Imtiaz Ahmed', '1.0', 5, 0, '5.00']
+            ]
+          }
+        ]
+      }
+    ]
   }
 ];
 
