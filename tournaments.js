@@ -560,6 +560,230 @@ const TOURNAMENT_SCORECARDS = [
         ]
       }
     ]
+  },
+  {
+    id: 't5',
+    name: 'PCL Season 5 - 2026',
+    date: '5 Jul 2026',
+    format: '3 Teams - Super Three + Final',
+    winner: 'Team Padma',
+    teams: [
+      { name: 'Team Padma', place: 1, players: ['Dipta Roy', 'Ataullah Khan Rifat', 'Ejajur Rahman Redoy', 'Md Shafayet Hossen Chowdhury', 'Md Shafiul Haque Ankon', 'Sazzad Tanveer', 'Tanzim Ahmed'] },
+      { name: 'Team Jamuna', place: 2, players: ['Bayazid Bostame Sony', 'Amam ul Hasan', 'Jayed Akbar Sumon', 'Md Nahian Imtiaz Hasan', 'Mohammed Ridowan', 'Nahid Hasan', 'Sufian Ahmed'] },
+      { name: 'Team Meghna', place: 3, players: ['Hasibul Hasan Shanto', 'GR Pranto', 'Iftekhar A', 'Imtiaz Ahmed', 'Md Shafayet Hossen Chowdhury', 'Mohammad Akash', 'Shahriar Ahmed'] }
+    ],
+    matches: [
+      {
+        label: 'Match 1', date: '2026-07-05, 08:07 AM UTC',
+        team1: 'Team Padma', team2: 'Team Jamuna',
+        score1: '77/5 (10.0 Ov)', score2: '79/3 (9.0 Ov)',
+        winner: 'Team Jamuna', result: 'Team Jamuna won by 3 wickets',
+        toss: 'Team Jamuna opt to field',
+        bestBat: [['Jayed Akbar Sumon', '52* (34), 6 sixes'], ['Dipta Roy', '27 (19), 1 four, 3 sixes'], ['Ataullah Khan Rifat', '13 (12), 1 four']],
+        bestBowl: [['Sufian Ahmed', '3/23 (3.0)'], ['Ataullah Khan Rifat', '1/7 (3.0)'], ['Tanzim Ahmed', '1/11 (3.0)']],
+        squads: {
+          'Team Padma': ['Dipta Roy (c)', 'Ataullah Khan Rifat', 'Ejajur Rahman Redoy', 'Md Shafayet Hossen Chowdhury', 'Md Shafiul Haque Ankon (wk)', 'Sazzad Tanveer', 'Tanzim Ahmed'],
+          'Team Jamuna': ['Bayazid Bostame Sony (c)', 'Amam ul Hasan', 'Jayed Akbar Sumon', 'Md Nahian Imtiaz Hasan', 'Mohammed Ridowan', 'Nahid Hasan', 'Sufian Ahmed']
+        },
+        innings: [
+          {
+            team: 'Team Padma', score: '77/5 (10.0 Ov)',
+            extras: '12 (wd 10, nb 2)',
+            fow: '0-1 (Tanzim Ahmed, 0.1 ov), 45-2 (Dipta Roy, 4.4 ov), 56-3 (Md Shafiul Haque Ankon, 7 ov), 62-4 (Ataullah Khan Rifat, 7.3 ov), 77-5 (Sazzad Tanveer, 9.5 ov)',
+            bat: [
+              ['Tanzim Ahmed', 'c Md Nahian Imtiaz Hasan b Sufian Ahmed', 0, 1, 0, 0, '0.00'],
+              ['Dipta Roy (c)', 'b Sufian Ahmed', 27, 19, 1, 3, '142.11'],
+              ['Md Shafiul Haque Ankon (wk)', 'b Bayazid Bostame Sony', 12, 15, 0, 0, '80.00'],
+              ['Ataullah Khan Rifat', 'b Sufian Ahmed', 13, 12, 1, 0, '108.33'],
+              ['Sazzad Tanveer', 'b Amam ul Hasan', 9, 6, 0, 1, '150.00'],
+              ['Ejajur Rahman Redoy', 'not out', 4, 8, 0, 0, '50.00'],
+              ['Md Shafayet Hossen Chowdhury', 'not out', 0, 1, 0, 0, '0.00']
+            ],
+            bowl: [
+              ['Sufian Ahmed', '3.0', 23, 3, '7.67'],
+              ['Bayazid Bostame Sony (c)', '2.0', 12, 1, '6.00'],
+              ['Mohammed Ridowan', '1.0', 21, 0, '21.00'],
+              ['Nahid Hasan', '3.0', 17, 0, '5.67'],
+              ['Amam ul Hasan', '1.0', 4, 1, '4.00']
+            ]
+          },
+          {
+            team: 'Team Jamuna', score: '79/3 (9.0 Ov)',
+            extras: '11 (wd 8, nb 3)',
+            fow: '9-1 (Nahid Hasan, 2.3 ov), 17-2 (Md Nahian Imtiaz Hasan, 4 ov), 50-3 (Sufian Ahmed, 7.2 ov)',
+            bat: [
+              ['Jayed Akbar Sumon', 'not out', 52, 34, 0, 6, '152.94'],
+              ['Nahid Hasan', 'b Tanzim Ahmed', 3, 7, 0, 0, '42.86'],
+              ['Md Nahian Imtiaz Hasan', 'c Tanzim Ahmed b Ejajur Rahman Redoy', 2, 4, 0, 0, '50.00'],
+              ['Sufian Ahmed', 'c †Md Shafiul Haque Ankon b Ataullah Khan Rifat', 9, 8, 0, 1, '112.50'],
+              ['Amam ul Hasan', 'not out', 2, 4, 0, 0, '50.00']
+            ],
+            bowl: [
+              ['Tanzim Ahmed', '3.0', 11, 1, '3.67'],
+              ['Ataullah Khan Rifat', '3.0', 7, 1, '2.33'],
+              ['Ejajur Rahman Redoy', '2.0', 35, 1, '17.50'],
+              ['Sazzad Tanveer', '1.0', 26, 0, '26.00']
+            ]
+          }
+        ]
+      },
+      {
+        label: 'Match 2', date: '2026-07-05, 09:57 AM UTC',
+        team1: 'Team Meghna', team2: 'Team Padma',
+        score1: '96/3 (10.0 Ov)', score2: '97/1 (7.4 Ov)',
+        winner: 'Team Padma', result: 'Team Padma won by 5 wickets',
+        toss: 'Team Meghna opt to bat',
+        bestBat: [['Dipta Roy', '54* (24), 2 fours, 4 sixes'], ['Hasibul Hasan Shanto', '38 (20), 1 four, 3 sixes'], ['Md Shafayet Hossen Chowdhury', '34* (19), 3 sixes']],
+        bestBowl: [['Tanzim Ahmed', '1/20 (3.0)'], ['Ataullah Khan Rifat', '1/23 (3.0)'], ['Sazzad Tanveer', '1/19 (2.0)']],
+        squads: {
+          'Team Meghna': ['Hasibul Hasan Shanto (c)', 'GR Pranto', 'Iftekhar A', 'Imtiaz Ahmed', 'Md Shafayet Hossen Chowdhury', 'Mohammad Akash', 'Shahriar Ahmed'],
+          'Team Padma': ['Dipta Roy (c)', 'Ataullah Khan Rifat', 'Ejajur Rahman Redoy', 'Md Shafayet Hossen Chowdhury', 'Md Shafiul Haque Ankon (wk)', 'Sazzad Tanveer', 'Tanzim Ahmed']
+        },
+        innings: [
+          {
+            team: 'Team Meghna', score: '96/3 (10.0 Ov)',
+            extras: '16 (wd 13, nb 3)',
+            fow: '2-1 (Mohammad Akash, 0.3 ov), 60-2 (Hasibul Hasan Shanto, 5.3 ov), 62-3 (Shahriar Ahmed, 6.2 ov)',
+            bat: [
+              ['Mohammad Akash', 'b Ataullah Khan Rifat', 1, 2, 0, 0, '50.00'],
+              ['Hasibul Hasan Shanto (c)', 'c †Md Shafiul Haque Ankon b Tanzim Ahmed', 38, 20, 1, 3, '190.00'],
+              ['Shahriar Ahmed', 'b Sazzad Tanveer', 10, 17, 0, 0, '58.82'],
+              ['GR Pranto', 'not out', 16, 14, 2, 0, '114.29'],
+              ['Imtiaz Ahmed', 'not out', 15, 10, 0, 1, '150.00']
+            ],
+            bowl: [
+              ['Ataullah Khan Rifat', '3.0', 23, 1, '7.67'],
+              ['Tanzim Ahmed', '3.0', 20, 1, '6.67'],
+              ['Ejajur Rahman Redoy', '1.0', 20, 0, '20.00'],
+              ['Md Shafayet Hossen Chowdhury', '1.0', 14, 0, '14.00'],
+              ['Sazzad Tanveer', '2.0', 19, 1, '9.50']
+            ]
+          },
+          {
+            team: 'Team Padma', score: '97/1 (7.4 Ov)',
+            extras: '8 (wd 8)',
+            fow: '12-1 (Tanzim Ahmed, 1 ov)',
+            bat: [
+              ['Dipta Roy (c)', 'not out', 54, 24, 2, 4, '225.00'],
+              ['Tanzim Ahmed', 'b Mohammad Akash', 1, 3, 0, 0, '33.33'],
+              ['Md Shafayet Hossen Chowdhury', 'not out', 34, 19, 0, 3, '178.95']
+            ],
+            bowl: [
+              ['Mohammad Akash', '2.4', 35, 1, '13.12'],
+              ['GR Pranto', '2.0', 21, 0, '10.50'],
+              ['Hasibul Hasan Shanto (c)', '2.0', 25, 0, '12.50'],
+              ['Md Shafayet Hossen Chowdhury', '1.0', 16, 0, '16.00']
+            ]
+          }
+        ]
+      },
+      {
+        label: 'Match 3', date: '2026-07-05, 11:38 AM UTC',
+        team1: 'Team Meghna', team2: 'Team Jamuna',
+        score1: '108/6 (10.0 Ov)', score2: '101/4 (10.0 Ov)',
+        winner: 'Team Meghna', result: 'Team Meghna won by 7 runs',
+        toss: 'Team Meghna opt to bat',
+        bestBat: [['Imtiaz Ahmed', '44 (18), 2 fours, 5 sixes'], ['Sufian Ahmed', '40 (26), 3 sixes'], ['Nahid Hasan', '34* (17), 1 four, 3 sixes']],
+        bestBowl: [['Mohammed Ridowan', '2/7 (1.0)'], ['Mohammad Akash', '2/24 (3.0)'], ['Nahid Hasan', '1/19 (3.0)']],
+        squads: {
+          'Team Meghna': ['Hasibul Hasan Shanto (c)', 'GR Pranto', 'Iftekhar A', 'Imtiaz Ahmed', 'Md Shafayet Hossen Chowdhury', 'Mohammad Akash', 'Shahriar Ahmed'],
+          'Team Jamuna': ['Bayazid Bostame Sony (c)', 'Amam ul Hasan', 'Jayed Akbar Sumon', 'Md Nahian Imtiaz Hasan', 'Mohammed Ridowan', 'Nahid Hasan', 'Sufian Ahmed']
+        },
+        innings: [
+          {
+            team: 'Team Meghna', score: '108/6 (10.0 Ov)',
+            extras: '12 (wd 9, nb 3)',
+            fow: '43-1 (Hasibul Hasan Shanto, 4.2 ov), 50-2 (Iftekhar A, 5.1 ov), 86-3 (GR Pranto, 6.1 ov), 95-4 (Mohammad Akash, 7.4 ov), 108-5 (Imtiaz Ahmed, 9.5 ov), 108-6 (Md Shafayet Hossen Chowdhury, 10 ov)',
+            bat: [
+              ['GR Pranto', 'c Md Nahian Imtiaz Hasan b Sufian Ahmed', 22, 16, 2, 1, '137.50'],
+              ['Hasibul Hasan Shanto (c)', 'c Md Nahian Imtiaz Hasan b Nahid Hasan', 23, 13, 1, 2, '176.92'],
+              ['Iftekhar A', 'b Amam ul Hasan', 1, 4, 0, 0, '25.00'],
+              ['Imtiaz Ahmed', 'b Mohammed Ridowan', 44, 18, 2, 5, '244.44'],
+              ['Mohammad Akash', 'b Bayazid Bostame Sony', 4, 8, 0, 0, '50.00'],
+              ['Shahriar Ahmed', 'not out', 2, 3, 0, 0, '66.67'],
+              ['Md Shafayet Hossen Chowdhury', 'b Mohammed Ridowan', 0, 1, 0, 0, '0.00']
+            ],
+            bowl: [
+              ['Sufian Ahmed', '3.0', 29, 1, '9.67'],
+              ['Bayazid Bostame Sony (c)', '2.0', 17, 1, '8.50'],
+              ['Nahid Hasan', '3.0', 19, 1, '6.33'],
+              ['Amam ul Hasan', '1.0', 36, 1, '36.00'],
+              ['Mohammed Ridowan', '1.0', 7, 2, '7.00']
+            ]
+          },
+          {
+            team: 'Team Jamuna', score: '101/4 (10.0 Ov)',
+            extras: '5 (wd 2, nb 3)',
+            fow: '18-1 (Jayed Akbar Sumon, 2.2 ov), 41-2 (Mohammed Ridowan, 5.3 ov), 87-3 (Sufian Ahmed, 9 ov), 95-4 (Bayazid Bostame Sony, 9.5 ov)',
+            bat: [
+              ['Jayed Akbar Sumon', 'c&b Mohammad Akash', 13, 10, 1, 1, '130.00'],
+              ['Sufian Ahmed', 'b Mohammad Akash', 40, 26, 0, 3, '153.85'],
+              ['Mohammed Ridowan', 'c Mohammad Akash b Md Shafayet Hossen Chowdhury', 9, 10, 1, 0, '90.00'],
+              ['Nahid Hasan', 'not out', 34, 17, 1, 3, '200.00'],
+              ['Bayazid Bostame Sony (c)', 'run out (Hasibul Hasan Shanto/Imtiaz Ahmed)', 0, 0, 0, 0, '0.00'],
+              ['Md Nahian Imtiaz Hasan', 'not out', 0, 0, 0, 0, '0.00']
+            ],
+            bowl: [
+              ['GR Pranto', '3.0', 27, 0, '9.00'],
+              ['Hasibul Hasan Shanto (c)', '2.0', 22, 0, '11.00'],
+              ['Mohammad Akash', '3.0', 24, 2, '8.00'],
+              ['Md Shafayet Hossen Chowdhury', '1.0', 14, 1, '14.00'],
+              ['Imtiaz Ahmed', '1.0', 14, 0, '14.00']
+            ]
+          }
+        ]
+      },
+      {
+        label: 'Final', date: '2026-07-05, 13:25 PM UTC',
+        team1: 'Team Jamuna', team2: 'Team Padma',
+        score1: '69/6 (9.1 Ov)', score2: '73/0 (4.5 Ov)',
+        winner: 'Team Padma', result: 'Team Padma won by 6 wickets',
+        toss: 'Team Padma opt to field',
+        bestBat: [['Jayed Akbar Sumon', '41 (26), 2 fours, 3 sixes'], ['Ataullah Khan Rifat', '37* (17), 5 fours, 1 six'], ['Dipta Roy', '26* (15), 1 four, 2 sixes']],
+        bestBowl: [['Ataullah Khan Rifat', '3/16 (3.0)'], ['Tanzim Ahmed', '2/27 (3.0)'], ['Sazzad Tanveer', '1/13 (1.1)']],
+        squads: {
+          'Team Jamuna': ['Bayazid Bostame Sony (c)', 'Amam ul Hasan', 'Jayed Akbar Sumon', 'Md Nahian Imtiaz Hasan', 'Mohammed Ridowan', 'Nahid Hasan', 'Sufian Ahmed'],
+          'Team Padma': ['Md Shafiul Haque Ankon (c)', 'Ataullah Khan Rifat', 'Dipta Roy', 'Ejajur Rahman Redoy', 'Md Shafayet Hossen Chowdhury', 'Sazzad Tanveer', 'Tanzim Ahmed']
+        },
+        innings: [
+          {
+            team: 'Team Jamuna', score: '69/6 (9.1 Ov)',
+            extras: '7 (wd 5, nb 2)',
+            fow: '29-1 (Sufian Ahmed, 3 ov), 63-2 (Jayed Akbar Sumon, 7.1 ov), 66-2 (Amam ul Hasan, 7.3 ov), 66-3 (Nahid Hasan, 7.4 ov), 67-4 (Mohammed Ridowan, 8 ov), 68-5 (Amam ul Hasan, 8.5 ov), 69-6 (Bayazid Bostame Sony, 9.1 ov)',
+            bat: [
+              ['Jayed Akbar Sumon', 'c †Md Shafiul Haque Ankon b Ataullah Khan Rifat', 41, 26, 2, 3, '157.69'],
+              ['Sufian Ahmed', 'b Tanzim Ahmed', 1, 4, 0, 0, '25.00'],
+              ['Amam ul Hasan', 'b Tanzim Ahmed', 15, 18, 0, 2, '83.33'],
+              ['Mohammed Ridowan', 'c Dipta Roy b Ataullah Khan Rifat', 3, 3, 0, 0, '100.00'],
+              ['Nahid Hasan', 'c Tanzim Ahmed b Ataullah Khan Rifat', 0, 1, 0, 0, '0.00'],
+              ['Bayazid Bostame Sony (c)', 'b Sazzad Tanveer', 2, 3, 0, 0, '66.67'],
+              ['Md Nahian Imtiaz Hasan', 'not out', 0, 2, 0, 0, '0.00']
+            ],
+            bowl: [
+              ['Tanzim Ahmed', '3.0', 27, 2, '9.00'],
+              ['Ataullah Khan Rifat', '3.0', 16, 3, '5.33'],
+              ['Ejajur Rahman Redoy', '2.0', 13, 0, '6.50'],
+              ['Sazzad Tanveer', '1.1', 13, 1, '11.14']
+            ]
+          },
+          {
+            team: 'Team Padma', score: '73/0 (4.5 Ov)',
+            extras: '10 (wd 7, nb 3)',
+            fow: '-',
+            bat: [
+              ['Dipta Roy', 'not out', 26, 15, 1, 2, '173.33'],
+              ['Ataullah Khan Rifat', 'not out', 37, 17, 5, 1, '217.65']
+            ],
+            bowl: [
+              ['Sufian Ahmed', '2.0', 18, 0, '9.00'],
+              ['Bayazid Bostame Sony (c)', '1.0', 17, 0, '17.00'],
+              ['Nahid Hasan', '1.0', 20, 0, '20.00'],
+              ['Mohammed Ridowan', '0.5', 18, 0, '21.60']
+            ]
+          }
+        ]
+      }
+    ]
   }
 ];
 

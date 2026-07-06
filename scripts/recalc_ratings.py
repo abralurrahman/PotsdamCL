@@ -13,14 +13,14 @@ import json, re, math
 
 HTML_PATH = r"c:\Users\abral\Desktop\Product\PotsdamCL\index.html"
 
-# ── PCL4 results (update these for each new tournament) ──────────────────────
-CHAMPION    = {'Hasibul Hasan Shanto', 'Ataullah Khan Rifat', 'Dipta Roy',
-               'Ejajur Rahman Redoy', 'Sazzad Tanveer', 'Imtiaz Ahmed',
-               'Md Nahian Imtiaz Hasan'}
-RUNNER_UP   = {'Nahid Hasan', 'Hasibur Rahman', 'Md Khalid Mahfuz', 'Md Noman',
-               'Shahriar Ahmed', 'Sufian Ahmed', 'Nahid Hasan (Junior)'}
-PARTICIPANT = {'Mohammad Akash', 'Amam ul Hasan', 'Borshon Gomes', 'GR Pranto',
-               'Iftekhar A', 'Jayed Akbar Sumon', 'Tanzim Ahmed'}
+# ── PCL5 results (update these for each new tournament) ──────────────────────
+CHAMPION    = {'Dipta Roy', 'Ataullah Khan Rifat', 'Ejajur Rahman Redoy',
+               'Md Shafiul Haque Ankon', 'Sazzad Tanveer', 'Tanzim Ahmed'}
+RUNNER_UP   = {'Bayazid Bostame Sony', 'Amam ul Hasan', 'Jayed Akbar Sumon',
+               'Md Nahian Imtiaz Hasan', 'Mohammed Ridowan', 'Nahid Hasan',
+               'Sufian Ahmed'}
+PARTICIPANT = {'Hasibul Hasan Shanto', 'GR Pranto', 'Iftekhar A', 'Imtiaz Ahmed',
+               'Mohammad Akash', 'Shahriar Ahmed', 'Md Shafayet Hossen Chowdhury'}
 # Players not in any set get the inactive penalty (-4%)
 # ─────────────────────────────────────────────────────────────────────────────
 
